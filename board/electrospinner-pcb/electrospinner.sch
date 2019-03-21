@@ -24,6 +24,7 @@ F 2 "" H 10500 850 50  0001 L CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15bb/0900766b815bb283.pdf" H 10450 1050 50  0001 C CNN
 F 4 "0900766b815bb283" H 0   0   50  0001 C CNN "MPN"
 F 5 "Emea" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "ordered" H 0   0   50  0001 C CNN "Status"
 	1    10450 1050
 	1    0    0    -1  
 $EndComp
@@ -35,6 +36,7 @@ F 0 "USB_B_Header1" H 1450 7150 50  0000 C CNN
 F 1 "USB_B_Header?" H 1450 7250 50  0000 C CNN
 F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 1600 6750 50  0001 C CNN
 F 3 " ~" H 1600 6750 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    1450 6800
 	1    0    0    -1  
 $EndComp
@@ -46,7 +48,7 @@ F 0 "Barrel_Jack1" H 750 2350 50  0000 C CNN
 F 1 "BarrelJack" H 700 2250 50  0000 C CNN
 F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 900 1960 50  0001 C CNN
 F 3 "~" H 900 1960 50  0001 C CNN
-F 4 " 474-PRT-00119 " H 0   0   50  0001 C CNN "MPN"
+F 4 " PRT-00119 " H 0   0   50  0001 C CNN "MPN"
 	1    850  2000
 	1    0    0    -1  
 $EndComp
@@ -59,6 +61,7 @@ F 1 "TPS62147" H 2350 426 50  0000 C CNN
 F 2 "footprints:TPS62147RGXR" H 2350 550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/tps62147" H 2350 550 50  0001 C CNN
 F 4 "TPS62147RGXR" H 0   0   50  0001 C CNN "MPN"
+F 5 "oredered" H 0   0   50  0001 C CNN "Status"
 	1    2350 550 
 	1    0    0    -1  
 $EndComp
@@ -81,6 +84,8 @@ F 0 "U5" H 7200 3300 50  0000 C CNN
 F 1 "MSP430G2553IPW20" H 7250 3200 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5250 1900 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/msp430g2553.pdf" H 6650 2450 50  0001 C CNN
+F 4 "MSP430G2553IPW20" H 0   0   50  0001 C CNN "MPN"
+F 5 "ordered" H 0   0   50  0001 C CNN "Status"
 	1    6700 2450
 	1    0    0    -1  
 $EndComp
@@ -113,8 +118,8 @@ P 1600 1400
 F 0 "C1" H 1400 1450 50  0000 L CNN
 F 1 "10uF" H 1350 1350 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 1600 1400 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf" H 1600 1400 50  0001 C CNN
-F 4 "80-T529P106M06AAE200" H 0   0   50  0001 C CNN "MPN"
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 1600 1400 50  0001 C CNN
+F 4 "C0805X106K8RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    1600 1400
 	1    0    0    -1  
 $EndComp
@@ -200,10 +205,10 @@ L electrospinner-rescue:C_Small-Device-electrospinner-rescue C5
 U 1 1 5C8D1374
 P 3600 1200
 F 0 "C5" H 3692 1246 50  0000 L CNN
-F 1 "2uF" H 3692 1155 50  0000 L CNN
+F 1 "2.2uF" H 3692 1155 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3600 1200 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21A226KQCLRNC.jsp" H 3600 1200 50  0001 C CNN
-F 4 "CL21A226KQCLRNC" H 0   0   50  0001 C CNN "MPN"
+F 3 "https://www.mouser.com/datasheet/2/40/X7RDielectric-777024.pdf" H 3600 1200 50  0001 C CNN
+F 4 "08056C225KAT2A" H 0   0   50  0001 C CNN "MPN"
 F 5 "" H 0   0   50  0001 C CNN "Manufacturer"
 	1    3600 1200
 	1    0    0    -1  
@@ -309,6 +314,7 @@ F 1 "TPS62147" H 2350 1726 50  0000 C CNN
 F 2 "footprints:TPS62147RGXR" H 2350 1850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/tps62147" H 2350 1850 50  0001 C CNN
 F 4 "TPS62147RGXR" H 0   0   50  0001 C CNN "MPN"
+F 5 "oredered" H 0   0   50  0001 C CNN "Status"
 	1    2350 1850
 	1    0    0    -1  
 $EndComp
@@ -321,8 +327,8 @@ P 1600 2700
 F 0 "C2" H 1400 2750 50  0000 L CNN
 F 1 "10uF" H 1350 2650 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 1600 2700 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf" H 1600 2700 50  0001 C CNN
-F 4 "80-T529P106M06AAE200" H 0   0   50  0001 C CNN "MPN"
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 1600 2700 50  0001 C CNN
+F 4 "C0805X106K8RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    1600 2700
 	1    0    0    -1  
 $EndComp
@@ -396,10 +402,10 @@ L electrospinner-rescue:C_Small-Device-electrospinner-rescue C6
 U 1 1 5C8E53D8
 P 3600 2500
 F 0 "C6" H 3692 2546 50  0000 L CNN
-F 1 "2uF" H 3692 2455 50  0000 L CNN
+F 1 "2.2uF" H 3692 2455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3600 2500 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21A226KQCLRNC.jsp" H 3600 2500 50  0001 C CNN
-F 4 "CL21A226KQCLRNC" H 0   0   50  0001 C CNN "MPN"
+F 3 "https://www.mouser.com/datasheet/2/40/X7RDielectric-777024.pdf" H 3600 2500 50  0001 C CNN
+F 4 "08056C225KAT2A" H 0   0   50  0001 C CNN "MPN"
 F 5 "" H 0   0   50  0001 C CNN "Manufacturer"
 	1    3600 2500
 	1    0    0    -1  
@@ -581,6 +587,7 @@ F 0 "D1" H 3150 5585 50  0000 C CNN
 F 1 "RXLED" H 3150 5494 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 3150 5350 50  0001 C CNN
 F 3 "~" V 3150 5350 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    3150 5350
 	1    0    0    -1  
 $EndComp
@@ -592,6 +599,7 @@ F 0 "D2" H 3150 5250 50  0000 C CNN
 F 1 "TXLED" H 3150 5350 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 3150 5450 50  0001 C CNN
 F 3 "~" V 3150 5450 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    3150 5450
 	1    0    0    -1  
 $EndComp
@@ -658,6 +666,7 @@ F 1 "FT230XS" H 2400 5800 50  0000 C CNN
 F 2 "Package_SO:SSOP-16_3.9x4.9mm_P0.635mm" H 2500 4500 50  0001 C CNN
 F 3 "http://www.ftdichip.com/Products/ICs/FT230X.html" H 2050 5150 50  0001 C CNN
 F 4 "FT230XS-R" H 0   0   50  0001 C CNN "MPN"
+F 5 "ordered" H 0   0   50  0001 C CNN "Status"
 	1    2050 5150
 	1    0    0    -1  
 $EndComp
@@ -727,6 +736,7 @@ F 0 "StepperMotor1" H 8737 5623 50  0000 L CNN
 F 1 "SY42STH47-1206A" H 8737 5532 50  0000 L CNN
 F 2 "" H 8560 5490 50  0001 C CNN
 F 3 "" H 8560 5490 50  0001 C CNN
+F 4 "ordered" H 0   0   50  0001 C CNN "Status"
 	1    8550 5500
 	1    0    0    -1  
 $EndComp
@@ -738,6 +748,7 @@ F 0 "MotorConnector_Female1" H 6650 5000 50  0000 L CNN
 F 1 "JST_1x6_Female" H 6800 4900 50  0000 L CNN
 F 2 "Connector_JST:JST_EH_B02B-EH-A_1x06_P2.50mm_Vertical" H 7200 5400 50  0001 C CNN
 F 3 "~" H 7200 5400 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    7200 5400
 	1    0    0    -1  
 $EndComp
@@ -749,6 +760,7 @@ F 0 "MotorConnector_Male1" H 7600 5850 50  0000 C CNN
 F 1 "JST_1x6_Male" H 7600 5750 50  0000 C CNN
 F 2 "" H 7500 5400 50  0001 C CNN
 F 3 "~" H 7500 5400 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    7500 5400
 	1    0    0    -1  
 $EndComp
@@ -834,6 +846,7 @@ F 0 "Temp_Female1" H 9100 1200 50  0000 L CNN
 F 1 "JST_1x2_Female" H 9050 1100 50  0000 L CNN
 F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 9350 1000 50  0001 C CNN
 F 3 "~" H 9350 1000 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    9350 1000
 	1    0    0    -1  
 $EndComp
@@ -845,6 +858,7 @@ F 0 "Temp_Male1" H 9950 1200 50  0000 C CNN
 F 1 "JST_1x2_Male" H 9950 1100 50  0000 C CNN
 F 2 "" H 9800 1000 50  0001 C CNN
 F 3 "~" H 9800 1000 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    9800 1000
 	1    0    0    -1  
 $EndComp
@@ -909,7 +923,7 @@ F 0 "C4" H 2000 2900 50  0000 L CNN
 F 1 "3.3uF" H 1950 2800 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 1900 2900 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/400/lcc_automotive_general_en-843974.pdf" H 1900 2900 50  0001 C CNN
-F 4 "810-CGA4J1X8L335K125" H 0   0   50  0001 C CNN "MPN"
+F 4 "CGA4J1X8L1C335K125AC" H 0   0   50  0001 C CNN "MPN"
 	1    1900 2900
 	1    0    0    -1  
 $EndComp
@@ -944,7 +958,7 @@ F 0 "C3" H 2000 1600 50  0000 L CNN
 F 1 "3.3uF" H 2000 1500 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 1900 1600 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/400/lcc_automotive_general_en-843974.pdf" H 1900 1600 50  0001 C CNN
-F 4 "810-CGA4J1X8L335K125" H 0   0   50  0001 C CNN "MPN"
+F 4 "CGA4J1X8L1C335K125AC" H 0   0   50  0001 C CNN "MPN"
 	1    1900 1600
 	1    0    0    -1  
 $EndComp
@@ -1012,8 +1026,8 @@ P 4450 2100
 F 0 "R7" H 4300 2200 50  0000 L CNN
 F 1 "1k" H 4300 2100 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 4450 2100 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-SR_D_F_tol_RoHS_L_3-1488676.pdf" H 4450 2100 50  0001 C CNN
-F 4 "MSP430G2553IPW20" H 0   0   50  0001 C CNN "MPN"
+F 3 "https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf" H 4450 2100 50  0001 C CNN
+F 4 " SG73G2ATTD1001D " H 0   0   50  0001 C CNN "MPN"
 	1    4450 2100
 	1    0    0    -1  
 $EndComp
@@ -1025,6 +1039,7 @@ F 0 "SW1" V 4496 1702 50  0000 R CNN
 F 1 "ResetBTN" V 4405 1702 50  0000 R CNN
 F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 4450 1950 50  0001 C CNN
 F 3 "" H 4450 1950 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    4450 1750
 	0    -1   -1   0   
 $EndComp
@@ -1104,7 +1119,7 @@ F 8 "https://www.allegromicro.com/~/media/Files/Datasheets/A4988-Datasheet.ashx"
 F 9 "/product-detail/en/allegro-microsystems-llc/A4988SETTR-T/620-1343-1-ND/2238004" H 5750 6400 60  0001 L CNN "DK_Detail_Page"
 F 10 "IC MTR DRVR BIPOLAR 3-5.5V 28QFN" H 5750 6500 60  0001 L CNN "Description"
 F 11 "Allegro MicroSystems, LLC" H 5750 6600 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 5750 6700 60  0001 L CNN "Status"
+F 12 "ordered" H 5750 6700 60  0001 L CNN "Status"
 	1    5550 5500
 	1    0    0    -1  
 $EndComp
@@ -1146,7 +1161,7 @@ U 1 1 5CCB8420
 P 4800 6000
 F 0 "C9" V 4800 5500 50  0000 C CNN
 F 1 "0.1uF" V 4800 5700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4800 6000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4800 6000 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 4800 6000 50  0001 C CNN
 F 4 "C0805X104K4RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    4800 6000
@@ -1211,7 +1226,7 @@ U 1 1 5CD0A6C1
 P 5400 6650
 F 0 "C11" H 5200 6600 50  0000 L CNN
 F 1 "0.22uF" H 5100 6500 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5400 6650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5400 6650 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/40/AutoMLCC-777028.pdf" H 5400 6650 50  0001 C CNN
 F 4 "08055C224K4T4A" H 0   0   50  0001 C CNN "MPN"
 	1    5400 6650
@@ -1245,8 +1260,8 @@ P 5550 3650
 F 0 "C13" H 5600 3750 50  0000 L CNN
 F 1 "10uF" H 5550 3550 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 5550 3650 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf" H 5550 3650 50  0001 C CNN
-F 4 "80-T529P106M06AAE200" H 0   0   50  0001 C CNN "MPN"
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 5550 3650 50  0001 C CNN
+F 4 "C0805X106K8RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    5550 3650
 	1    0    0    -1  
 $EndComp
@@ -1273,7 +1288,7 @@ U 1 1 5CEB9D72
 P 5350 3650
 F 0 "C10" H 5100 3700 50  0000 L CNN
 F 1 "0.1uF" H 5050 3600 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5350 3650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5350 3650 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 5350 3650 50  0001 C CNN
 F 4 "C0805X104K4RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    5350 3650
@@ -1287,7 +1302,7 @@ U 1 1 5CEC303C
 P 5750 3650
 F 0 "C14" H 5842 3696 50  0000 L CNN
 F 1 "0.1uF" H 5842 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5750 3650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5750 3650 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 5750 3650 50  0001 C CNN
 F 4 "C0805X104K4RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    5750 3650
@@ -1359,7 +1374,7 @@ F 0 "C12" H 5550 4050 50  0000 L CNN
 F 1 "1uF" H 5550 3950 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 5450 4050 50  0001 C CNN
 F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10B104KB8NNNC.jsp" H 5450 4050 50  0001 C CNN
-F 4 "CL10B104KB8NNNC" H 0   0   50  0001 C CNN "MPN"
+F 4 "C0805C105Z5VACTU" H 0   0   50  0001 C CNN "MPN"
 	1    5450 4050
 	1    0    0    -1  
 $EndComp
@@ -1387,8 +1402,8 @@ P 4500 4100
 F 0 "C7" V 4728 4100 50  0000 C CNN
 F 1 "10uF" V 4637 4100 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 4500 4100 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf" H 4500 4100 50  0001 C CNN
-F 4 "80-T529P106M06AAE200" H 0   0   50  0001 C CNN "MPN"
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 4500 4100 50  0001 C CNN
+F 4 "C0805X106K8RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    4500 4100
 	0    -1   -1   0   
 $EndComp
@@ -1398,7 +1413,7 @@ U 1 1 5CF9A697
 P 4500 4450
 F 0 "C8" V 4271 4450 50  0000 C CNN
 F 1 "0.1uF" V 4362 4450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4500 4450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4500 4450 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 4500 4450 50  0001 C CNN
 F 4 "C0805X104K4RACAUTO" H 0   0   50  0001 C CNN "MPN"
 	1    4500 4450

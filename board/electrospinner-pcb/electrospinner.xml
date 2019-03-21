@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-pcb/electrospinner.sch</source>
-    <date>Wed 20 Mar 2019 07:17:08 PM EDT</date>
+    <date>Wed 20 Mar 2019 08:18:57 PM EDT</date>
     <tool>Eeschema 5.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -25,6 +25,7 @@
       <fields>
         <field name="MPN">0900766b815bb283</field>
         <field name="Manufacturer">Emea</field>
+        <field name="Status">ordered</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="Thermistor_PTC-Device-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -34,6 +35,9 @@
       <value>USB_B_Header?</value>
       <footprint>Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Connector" part="USB_B" description="USB Type B connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8B2315</tstamp>
@@ -43,7 +47,7 @@
       <footprint>Connector_BarrelJack:BarrelJack_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN"> 474-PRT-00119 </field>
+        <field name="MPN"> PRT-00119 </field>
       </fields>
       <libsource lib="electrospinner-rescue" part="Barrel_Jack_MountingPin-Connector-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -55,6 +59,7 @@
       <datasheet>http://www.ti.com/lit/gpn/tps62147</datasheet>
       <fields>
         <field name="MPN">TPS62147RGXR</field>
+        <field name="Status">oredered</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -64,6 +69,10 @@
       <value>MSP430G2553IPW20</value>
       <footprint>Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/msp430g2553.pdf</datasheet>
+      <fields>
+        <field name="MPN">MSP430G2553IPW20</field>
+        <field name="Status">ordered</field>
+      </fields>
       <libsource lib="electrospinner-rescue" part="MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C884675</tstamp>
@@ -71,9 +80,9 @@
     <comp ref="C1">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
-        <field name="MPN">80-T529P106M06AAE200</field>
+        <field name="MPN">C0805X106K8RACAUTO</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="C_Small-Device-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -113,11 +122,11 @@
       <tstamp>5C8D0832</tstamp>
     </comp>
     <comp ref="C5">
-      <value>2uF</value>
+      <value>2.2uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>http://www.samsungsem.com/kr/support/product-search/mlcc/CL21A226KQCLRNC.jsp</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/40/X7RDielectric-777024.pdf</datasheet>
       <fields>
-        <field name="MPN">CL21A226KQCLRNC</field>
+        <field name="MPN">08056C225KAT2A</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="C_Small-Device-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -129,6 +138,7 @@
       <datasheet>http://www.ti.com/lit/gpn/tps62147</datasheet>
       <fields>
         <field name="MPN">TPS62147RGXR</field>
+        <field name="Status">oredered</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -137,9 +147,9 @@
     <comp ref="C2">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
-        <field name="MPN">80-T529P106M06AAE200</field>
+        <field name="MPN">C0805X106K8RACAUTO</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="C_Small-Device-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -168,11 +178,11 @@
       <tstamp>5C8E53C0</tstamp>
     </comp>
     <comp ref="C6">
-      <value>2uF</value>
+      <value>2.2uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>http://www.samsungsem.com/kr/support/product-search/mlcc/CL21A226KQCLRNC.jsp</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/40/X7RDielectric-777024.pdf</datasheet>
       <fields>
-        <field name="MPN">CL21A226KQCLRNC</field>
+        <field name="MPN">08056C225KAT2A</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="C_Small-Device-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -182,6 +192,9 @@
       <value>RXLED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Device" part="LED_Small" description="Light emitting diode, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E8596</tstamp>
@@ -190,6 +203,9 @@
       <value>TXLED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Device" part="LED_Small" description="Light emitting diode, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E85F7</tstamp>
@@ -222,6 +238,7 @@
       <datasheet>http://www.ftdichip.com/Products/ICs/FT230X.html</datasheet>
       <fields>
         <field name="MPN">FT230XS-R</field>
+        <field name="Status">ordered</field>
       </fields>
       <libsource lib="Interface_USB" part="FT230XS" description="Full Speed USB to Basic UART, SSOP-16"/>
       <sheetpath names="/" tstamps="/"/>
@@ -240,6 +257,9 @@
     </comp>
     <comp ref="StepperMotor1">
       <value>SY42STH47-1206A</value>
+      <fields>
+        <field name="Status">ordered</field>
+      </fields>
       <libsource lib="Motor" part="Stepper_Motor_unipolar_6pin" description="6-wire unipolar stepper motor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8F695F</tstamp>
@@ -248,6 +268,9 @@
       <value>JST_1x6_Female</value>
       <footprint>Connector_JST:JST_EH_B02B-EH-A_1x06_P2.50mm_Vertical</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x06_Female" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C96304A</tstamp>
@@ -255,6 +278,9 @@
     <comp ref="MotorConnector_Male1">
       <value>JST_1x6_Male</value>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x06_Male" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C963153</tstamp>
@@ -274,6 +300,9 @@
       <value>JST_1x2_Female</value>
       <footprint>Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x02_Female" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E31D3</tstamp>
@@ -281,6 +310,9 @@
     <comp ref="Temp_Male1">
       <value>JST_1x2_Male</value>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E32D1</tstamp>
@@ -290,7 +322,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/400/lcc_automotive_general_en-843974.pdf</datasheet>
       <fields>
-        <field name="MPN">810-CGA4J1X8L335K125</field>
+        <field name="MPN">CGA4J1X8L1C335K125AC</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -301,7 +333,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/400/lcc_automotive_general_en-843974.pdf</datasheet>
       <fields>
-        <field name="MPN">810-CGA4J1X8L335K125</field>
+        <field name="MPN">CGA4J1X8L1C335K125AC</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -310,9 +342,9 @@
     <comp ref="R7">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/447/PYu-SR_D_F_tol_RoHS_L_3-1488676.pdf</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf</datasheet>
       <fields>
-        <field name="MPN">MSP430G2553IPW20</field>
+        <field name="MPN"> SG73G2ATTD1001D </field>
       </fields>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -321,6 +353,9 @@
     <comp ref="SW1">
       <value>ResetBTN</value>
       <footprint>Button_Switch_THT:SW_PUSH_6mm_H5mm</footprint>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5CA1B3E2</tstamp>
@@ -338,7 +373,7 @@
         <field name="Family">PMIC - Motor Drivers, Controllers</field>
         <field name="MPN">A4988SETTR-T</field>
         <field name="Manufacturer">Allegro MicroSystems, LLC</field>
-        <field name="Status">Active</field>
+        <field name="Status">ordered</field>
       </fields>
       <libsource lib="dk_PMIC-Motor-Drivers-Controllers" part="A4988SETTR-T" description="IC MTR DRVR BIPOLAR 3-5.5V 28QFN"/>
       <sheetpath names="/" tstamps="/"/>
@@ -346,7 +381,7 @@
     </comp>
     <comp ref="C9">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
         <field name="MPN">C0805X104K4RACAUTO</field>
@@ -357,7 +392,7 @@
     </comp>
     <comp ref="C11">
       <value>0.22uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/40/AutoMLCC-777028.pdf</datasheet>
       <fields>
         <field name="MPN">08055C224K4T4A</field>
@@ -369,9 +404,9 @@
     <comp ref="C13">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
-        <field name="MPN">80-T529P106M06AAE200</field>
+        <field name="MPN">C0805X106K8RACAUTO</field>
       </fields>
       <libsource lib="Device" part="CP1_Small" description="Polarized capacitor, small US symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -379,7 +414,7 @@
     </comp>
     <comp ref="C10">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
         <field name="MPN">C0805X104K4RACAUTO</field>
@@ -390,7 +425,7 @@
     </comp>
     <comp ref="C14">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
         <field name="MPN">C0805X104K4RACAUTO</field>
@@ -404,7 +439,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>http://www.samsungsem.com/kr/support/product-search/mlcc/CL10B104KB8NNNC.jsp</datasheet>
       <fields>
-        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="MPN">C0805C105Z5VACTU</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -413,9 +448,9 @@
     <comp ref="C7">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/212/T520D108M2R5ATE006-1265335-1488592.pdf</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
-        <field name="MPN">80-T529P106M06AAE200</field>
+        <field name="MPN">C0805X106K8RACAUTO</field>
       </fields>
       <libsource lib="Device" part="CP1_Small" description="Polarized capacitor, small US symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -423,7 +458,7 @@
     </comp>
     <comp ref="C8">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
       <fields>
         <field name="MPN">C0805X104K4RACAUTO</field>

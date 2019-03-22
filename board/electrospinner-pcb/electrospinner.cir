@@ -1,0 +1,43 @@
+.title KiCad schematic
+Pt1 Net-_Pt1-Pad1_ Net-_Pt1-Pad2_ RS Pro 2371607
+USB_B_Header1 NC_01 /D- /D+ GNDD GNDD USB_B_Header?
+Barrel_Jack1 +5V GNDD GNDD BarrelJack
+U2 +5V Net-_L1-Pad1_ GNDD GNDD Net-_R1-Pad2_ Net-_L1-Pad1_ GNDD +5V Net-_C3-Pad1_ GNDD +5V TPS62147
+U5 +3V3 /Vo,temp /PCB_TX /PCB_RX NC_02 NC_03 NC_04 /~MotorSLEEP /MotorSTEP /MotorMS1 /MotorMS2 /MotorMS3 /MotorDIR /~MotorENABLE NC_05 /~RST /TEST NC_06 NC_07 GNDD MSP430G2553IPW20
+C1 +5V GNDD 10u
+L1 Net-_L1-Pad1_ +4V 1u
+R2 Net-_R1-Pad2_ GNDD 100k
+R1 +4V Net-_R1-Pad2_ 470k
+C5 +4V GNDD 2.2u
+U3 +5V Net-_L2-Pad1_ GNDD GNDD Net-_R3-Pad2_ Net-_L2-Pad1_ GNDD +5V Net-_C4-Pad1_ GNDD +5V TPS62147
+C2 +5V GNDD 10u
+L2 Net-_L2-Pad1_ +3V3 1u
+R4 Net-_R3-Pad2_ GNDD 150k
+C6 +3V3 GNDD 2.2u
+D1 /~RXLED Net-_D1-Pad2_ RXLED
+D2 /~TXLED Net-_D2-Pad2_ TXLED
+R5 +3V3 Net-_D1-Pad2_ 390
+R6 +3V3 Net-_D2-Pad2_ 390
+U1 /PCB_TX NC_08 +3V3 /PCB_RX GNDD NC_09 /~TXLED /D+ /D- NC_10 /~RST +3V3 GNDD /~RXLED NC_11 NC_12 FT230XS
+R3 +3V3 Net-_R3-Pad2_ 560k
+StepperMotor1 /RED /WHT /BLU /BLK /YEL /GRN SY42STH47-1206A
+MotorConnector_Female1 /1A NC_13 /2A /1B NC_14 /2B JST_1x6_Female
+MotorConnector_Male1 /RED /WHT /BLU /BLK /YEL /GRN JST_1x6_Male
+R8 /Vo,temp GNDD 158
+Temp_Female1 +3V3 /Vo,temp JST_1x2_Female
+Temp_Male1 Net-_Pt1-Pad1_ Net-_Pt1-Pad2_ JST_1x2_Male
+C4 Net-_C4-Pad1_ GNDD 3.3u
+C3 Net-_C3-Pad1_ GNDD 3.3u
+R7 /~RST GNDD 1k
+SW1 /~RST +3V3 ResetBTN
+U4 /2B /~MotorENABLE GNDD Net-_C9-Pad2_ Net-_C9-Pad1_ /VCP NC_15 Net-_C11-Pad1_ /MotorMS1 /MotorMS2 /MotorMS3 NC_16 NC_17 /~MotorSLEEP +3V3 /MotorSTEP +3V3 GNDD /MotorDIR NC_18 /2A +4V NC_19 /1A NC_20 /1B NC_21 +4V GNDD A4988SETTR-T
+C9 Net-_C9-Pad1_ Net-_C9-Pad2_ 0.1u
+C11 Net-_C11-Pad1_ GNDD 0.22u
+C13 +4V GNDD 10u
+C10 +4V GNDD 0.1u
+C14 +4V GNDD 0.1u
+C12 +4V /VCP 1u
+C7 +3V3 GNDD 10u
+C8 GNDD +3V3 0.1u
+J1 +3V3 GNDD /TEST /~RST Header_02x02
+.end

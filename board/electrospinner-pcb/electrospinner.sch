@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:electrospinner-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -284,17 +284,6 @@ Wire Wire Line
 Wire Wire Line
 	3700 850  3600 850 
 Connection ~ 3600 850 
-$Comp
-L power:+3V3 #PWR037
-U 1 1 5C8DFDF2
-P 6700 1450
-F 0 "#PWR037" H 6700 1300 50  0001 C CNN
-F 1 "+3V3" H 6715 1623 50  0000 C CNN
-F 2 "" H 6700 1450 50  0001 C CNN
-F 3 "" H 6700 1450 50  0001 C CNN
-	1    6700 1450
-	1    0    0    -1  
-$EndComp
 Connection ~ 3250 850 
 Wire Wire Line
 	3250 850  3150 850 
@@ -654,7 +643,7 @@ $EndComp
 Text Label 2800 5450 0    50   ~ 0
 ~TXLED
 $Comp
-L Interface_USB:FT230XS U1
+L electrospinner-rescue:FT230XS-Interface_USB U1
 U 1 1 5C8F4F67
 P 2050 5150
 F 0 "U1" H 2400 5900 50  0000 C CNN
@@ -1005,26 +994,15 @@ Wire Wire Line
 	1600 1300 1600 1150
 Connection ~ 1600 1150
 $Comp
-L power:GNDD #PWR026
-U 1 1 5CA15C71
-P 4450 2300
-F 0 "#PWR026" H 4450 2050 50  0001 C CNN
-F 1 "GNDD" H 4454 2145 50  0001 C CNN
-F 2 "" H 4450 2300 50  0001 C CNN
-F 3 "" H 4450 2300 50  0001 C CNN
-	1    4450 2300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small_US R7
 U 1 1 5CA15E6A
-P 4450 2100
-F 0 "R7" H 4300 2200 50  0000 L CNN
-F 1 "1k" H 4300 2100 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 4450 2100 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf" H 4450 2100 50  0001 C CNN
-F 4 " SG73G2ATTD1001D " H 0   0   50  0001 C CNN "MPN"
-	1    4450 2100
+P 4450 2200
+F 0 "R7" H 4300 2300 50  0000 L CNN
+F 1 "1k" H 4300 2200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4450 2200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf" H 4450 2200 50  0001 C CNN
+F 4 " SG73G2ATTD1001D " H 0   100 50  0001 C CNN "MPN"
+	1    4450 2200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1042,21 +1020,17 @@ $EndComp
 Connection ~ 4450 2000
 Wire Wire Line
 	4450 1950 4450 2000
-Wire Wire Line
-	4450 1500 4450 1550
 $Comp
 L power:+3V3 #PWR025
 U 1 1 5CA2603E
-P 4450 1500
-F 0 "#PWR025" H 4450 1350 50  0001 C CNN
-F 1 "+3V3" H 4465 1673 50  0000 C CNN
-F 2 "" H 4450 1500 50  0001 C CNN
-F 3 "" H 4450 1500 50  0001 C CNN
-	1    4450 1500
+P 4450 1450
+F 0 "#PWR025" H 4450 1300 50  0001 C CNN
+F 1 "+3V3" H 4465 1623 50  0000 C CNN
+F 2 "" H 4450 1450 50  0001 C CNN
+F 3 "" H 4450 1450 50  0001 C CNN
+	1    4450 1450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4450 2200 4450 2300
 Text Label 8600 2050 0    50   ~ 0
 Vo,temp
 Wire Wire Line
@@ -1099,383 +1073,6 @@ Wire Wire Line
 	8400 2150 8900 2150
 Wire Wire Line
 	8400 2250 8900 2250
-$Comp
-L dk_PMIC-Motor-Drivers-Controllers:A4988SETTR-T U4
-U 1 1 5CBCC575
-P 5750 6250
-F 0 "U4" H 6250 5950 60  0000 L CNN
-F 1 "A4988SETTR-T" H 6200 5850 60  0000 L CNN
-F 2 "digikey-footprints:VFQFN-28-1EP_5x5mm" H 5950 6450 60  0001 L CNN
-F 3 "https://www.allegromicro.com/~/media/Files/Datasheets/A4988-Datasheet.ashx" H 5950 6550 60  0001 L CNN
-F 4 "620-1343-1-ND" H 5950 6650 60  0001 L CNN "Digi-Key_PN"
-F 5 "A4988SETTR-T" H 5950 6750 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 5950 6850 60  0001 L CNN "Category"
-F 7 "PMIC - Motor Drivers, Controllers" H 5950 6950 60  0001 L CNN "Family"
-F 8 "https://www.allegromicro.com/~/media/Files/Datasheets/A4988-Datasheet.ashx" H 5950 7050 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/allegro-microsystems-llc/A4988SETTR-T/620-1343-1-ND/2238004" H 5950 7150 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC MTR DRVR BIPOLAR 3-5.5V 28QFN" H 5950 7250 60  0001 L CNN "Description"
-F 11 "Allegro MicroSystems, LLC" H 5950 7350 60  0001 L CNN "Manufacturer"
-F 12 "ordered" H 5950 7450 60  0001 L CNN "Status"
-	1    5750 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 5750 4700 5750
-Text Label 4700 5750 0    50   ~ 0
-~MotorENABLE
-Wire Wire Line
-	5250 5850 4700 5850
-Text Label 4700 5850 0    50   ~ 0
-MotorMS1
-Wire Wire Line
-	5250 5950 4700 5950
-Text Label 4700 5950 0    50   ~ 0
-MotorMS2
-Wire Wire Line
-	5250 6050 4700 6050
-Text Label 4700 6050 0    50   ~ 0
-MotorMS3
-Wire Wire Line
-	5250 6150 4700 6150
-Text Label 4700 6150 0    50   ~ 0
-~MotorRESET
-Wire Wire Line
-	5250 6250 4700 6250
-Text Label 4700 6250 0    50   ~ 0
-~MotorSLEEP
-Wire Wire Line
-	5250 6350 4700 6350
-Text Label 4700 6350 0    50   ~ 0
-MotorSTEP
-Wire Wire Line
-	5250 6450 4700 6450
-Text Label 4700 6450 0    50   ~ 0
-MotorDIR
-$Comp
-L Device:C_Small C9
-U 1 1 5CCB8420
-P 5000 6750
-F 0 "C9" V 5000 6250 50  0000 C CNN
-F 1 "0.1uF" V 5000 6450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5000 6750 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 5000 6750 50  0001 C CNN
-F 4 "C0805X104K4RACAUTO" H 200 750 50  0001 C CNN "MPN"
-	1    5000 6750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4900 6750 4850 6750
-Wire Wire Line
-	4850 6750 4850 6650
-Wire Wire Line
-	4850 6650 5250 6650
-Wire Wire Line
-	5250 6750 5100 6750
-$Comp
-L power:GNDD #PWR029
-U 1 1 5CCCE062
-P 5450 7300
-F 0 "#PWR029" H 5450 7050 50  0001 C CNN
-F 1 "GNDD" H 5454 7145 50  0001 C CNN
-F 2 "" H 5450 7300 50  0001 C CNN
-F 3 "" H 5450 7300 50  0001 C CNN
-	1    5450 7300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5750 7250 5750 7300
-$Comp
-L power:GNDD #PWR034
-U 1 1 5CCCE175
-P 5750 7300
-F 0 "#PWR034" H 5750 7050 50  0001 C CNN
-F 1 "GNDD" H 5754 7145 50  0001 C CNN
-F 2 "" H 5750 7300 50  0001 C CNN
-F 3 "" H 5750 7300 50  0001 C CNN
-	1    5750 7300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 7250 6050 7300
-$Comp
-L power:GNDD #PWR036
-U 1 1 5CCD5431
-P 6050 7300
-F 0 "#PWR036" H 6050 7050 50  0001 C CNN
-F 1 "GNDD" H 6054 7145 50  0001 C CNN
-F 2 "" H 6050 7300 50  0001 C CNN
-F 3 "" H 6050 7300 50  0001 C CNN
-	1    6050 7300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 7250 5450 7250
-Wire Wire Line
-	5450 7250 5450 7300
-Wire Wire Line
-	5650 7250 5650 7300
-Wire Wire Line
-	5650 7300 5600 7300
-$Comp
-L Device:C_Small C11
-U 1 1 5CD0A6C1
-P 5600 7400
-F 0 "C11" H 5400 7350 50  0000 L CNN
-F 1 "0.22uF" H 5300 7250 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5600 7400 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/40/AutoMLCC-777028.pdf" H 5600 7400 50  0001 C CNN
-F 4 "08055C224K4T4A" H 200 750 50  0001 C CNN "MPN"
-	1    5600 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR031
-U 1 1 5CD0AA05
-P 5600 7550
-F 0 "#PWR031" H 5600 7300 50  0001 C CNN
-F 1 "GNDD" H 5604 7395 50  0001 C CNN
-F 2 "" H 5600 7550 50  0001 C CNN
-F 3 "" H 5600 7550 50  0001 C CNN
-	1    5600 7550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5600 7550 5600 7500
-Text Label 6350 6050 0    50   ~ 0
-1A
-Text Label 6350 6150 0    50   ~ 0
-2A
-Text Label 6350 6250 0    50   ~ 0
-1B
-Text Label 6350 6350 0    50   ~ 0
-2B
-$Comp
-L Device:CP1_Small C13
-U 1 1 5CD8EC7B
-P 5750 4400
-F 0 "C13" H 5800 4500 50  0000 L CNN
-F 1 "10uF" H 5750 4300 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5750 4400 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 5750 4400 50  0001 C CNN
-F 4 "C0805X106K8RACAUTO" H 200 750 50  0001 C CNN "MPN"
-	1    5750 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR033
-U 1 1 5CDA762C
-P 5750 4600
-F 0 "#PWR033" H 5750 4350 50  0001 C CNN
-F 1 "GNDD" H 5754 4445 50  0001 C CNN
-F 2 "" H 5750 4600 50  0001 C CNN
-F 3 "" H 5750 4600 50  0001 C CNN
-	1    5750 4600
-	1    0    0    -1  
-$EndComp
-Text Label 6050 5150 3    50   ~ 0
-VBB2
-Text Label 5950 5150 3    50   ~ 0
-VBB1
-Text Label 5650 5150 3    50   ~ 0
-VCP
-$Comp
-L Device:C_Small C10
-U 1 1 5CEB9D72
-P 5550 4400
-F 0 "C10" H 5300 4450 50  0000 L CNN
-F 1 "0.1uF" H 5250 4350 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5550 4400 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 5550 4400 50  0001 C CNN
-F 4 "C0805X104K4RACAUTO" H 200 750 50  0001 C CNN "MPN"
-	1    5550 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5950 4200 5950 4300
-$Comp
-L Device:C_Small C14
-U 1 1 5CEC303C
-P 5950 4400
-F 0 "C14" H 6042 4446 50  0000 L CNN
-F 1 "0.1uF" H 6042 4355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5950 4400 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 5950 4400 50  0001 C CNN
-F 4 "C0805X104K4RACAUTO" H 200 750 50  0001 C CNN "MPN"
-	1    5950 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5950 4500 5950 4600
-$Comp
-L power:GNDD #PWR035
-U 1 1 5CECBA17
-P 5950 4600
-F 0 "#PWR035" H 5950 4350 50  0001 C CNN
-F 1 "GNDD" H 5954 4445 50  0001 C CNN
-F 2 "" H 5950 4600 50  0001 C CNN
-F 3 "" H 5950 4600 50  0001 C CNN
-	1    5950 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 4500 5550 4600
-$Comp
-L power:GNDD #PWR030
-U 1 1 5CECBAF8
-P 5550 4600
-F 0 "#PWR030" H 5550 4350 50  0001 C CNN
-F 1 "GNDD" H 5554 4445 50  0001 C CNN
-F 2 "" H 5550 4600 50  0001 C CNN
-F 3 "" H 5550 4600 50  0001 C CNN
-	1    5550 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5750 4500 5750 4600
-Wire Wire Line
-	5950 4200 5750 4200
-Wire Wire Line
-	5750 4200 5750 4300
-Wire Wire Line
-	5550 4200 5550 4300
-Connection ~ 5750 4200
-$Comp
-L power:+4V #PWR032
-U 1 1 5CF2249F
-P 5750 4100
-F 0 "#PWR032" H 5750 3950 50  0001 C CNN
-F 1 "+4V" H 5765 4273 50  0000 C CNN
-F 2 "" H 5750 4100 50  0001 C CNN
-F 3 "" H 5750 4100 50  0001 C CNN
-	1    5750 4100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5750 4100 5750 4200
-Connection ~ 5950 4200
-Text Label 6000 4200 0    50   ~ 0
-VBB1
-Wire Wire Line
-	5950 4200 6200 4200
-Wire Wire Line
-	5550 4200 5300 4200
-Connection ~ 5550 4200
-Text Label 5300 4200 0    50   ~ 0
-VBB2
-$Comp
-L Device:C_Small C12
-U 1 1 5CF4EF56
-P 5650 4800
-F 0 "C12" H 5750 4800 50  0000 L CNN
-F 1 "1uF" H 5750 4700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5650 4800 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10B104KB8NNNC.jsp" H 5650 4800 50  0001 C CNN
-F 4 "C0805C105Z5VACTU" H 200 750 50  0001 C CNN "MPN"
-	1    5650 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 4200 5650 4200
-Wire Wire Line
-	5650 4700 5650 4200
-Connection ~ 5650 4200
-Wire Wire Line
-	5650 4200 5750 4200
-Text Label 5650 5050 1    50   ~ 0
-VCP
-Wire Wire Line
-	5650 4900 5650 5050
-Text Label 5750 5150 3    50   ~ 0
-ROSC
-Text Label 5850 5150 3    50   ~ 0
-VDD
-Text Label 4700 6550 0    50   ~ 0
-REF
-$Comp
-L Device:CP1_Small C7
-U 1 1 5CF9A506
-P 4700 4850
-F 0 "C7" V 4928 4850 50  0000 C CNN
-F 1 "10uF" V 4837 4850 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4700 4850 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 4700 4850 50  0001 C CNN
-F 4 "C0805X106K8RACAUTO" H 200 750 50  0001 C CNN "MPN"
-	1    4700 4850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small C8
-U 1 1 5CF9A697
-P 4700 5200
-F 0 "C8" V 4471 5200 50  0000 C CNN
-F 1 "0.1uF" V 4562 5200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4700 5200 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 4700 5200 50  0001 C CNN
-F 4 "C0805X104K4RACAUTO" H 200 750 50  0001 C CNN "MPN"
-	1    4700 5200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4400 5200 4600 5200
-Connection ~ 4400 5200
-Wire Wire Line
-	4600 4850 4400 4850
-Connection ~ 4400 4850
-Wire Wire Line
-	4400 4850 4400 5200
-Text Label 4400 5350 1    50   ~ 0
-VDD
-Wire Wire Line
-	4800 4850 4850 4850
-Wire Wire Line
-	4850 4850 4850 4900
-$Comp
-L power:GNDD #PWR027
-U 1 1 5CFD51E0
-P 4850 4900
-F 0 "#PWR027" H 4850 4650 50  0001 C CNN
-F 1 "GNDD" H 4854 4745 50  0001 C CNN
-F 2 "" H 4850 4900 50  0001 C CNN
-F 3 "" H 4850 4900 50  0001 C CNN
-	1    4850 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 5200 4850 5200
-Wire Wire Line
-	4850 5200 4850 5250
-$Comp
-L power:GNDD #PWR028
-U 1 1 5CFDF819
-P 4850 5250
-F 0 "#PWR028" H 4850 5000 50  0001 C CNN
-F 1 "GNDD" H 4854 5095 50  0001 C CNN
-F 2 "" H 4850 5250 50  0001 C CNN
-F 3 "" H 4850 5250 50  0001 C CNN
-	1    4850 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR024
-U 1 1 5CFF4227
-P 4400 4600
-F 0 "#PWR024" H 4400 4450 50  0001 C CNN
-F 1 "+3V3" H 4415 4773 50  0000 C CNN
-F 2 "" H 4400 4600 50  0001 C CNN
-F 3 "" H 4400 4600 50  0001 C CNN
-	1    4400 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 5350 6050 5150
-Wire Wire Line
-	5950 5350 5950 5150
-Wire Wire Line
-	5850 5350 5850 5150
-Wire Wire Line
-	5750 5350 5750 5150
-Wire Wire Line
-	5650 5350 5650 5150
 Wire Wire Line
 	7150 6250 7000 6250
 Wire Wire Line
@@ -1484,18 +1081,6 @@ Wire Wire Line
 	7150 5950 7000 5950
 Wire Wire Line
 	7150 5750 7000 5750
-Wire Wire Line
-	6250 6350 6450 6350
-Wire Wire Line
-	6250 6250 6450 6250
-Wire Wire Line
-	6250 6150 6450 6150
-Wire Wire Line
-	6250 6050 6450 6050
-Wire Wire Line
-	4400 5200 4400 5350
-NoConn ~ 5850 7250
-NoConn ~ 5950 7250
 Text Label 4600 2000 0    50   ~ 0
 ~RST
 Wire Wire Line
@@ -1503,10 +1088,10 @@ Wire Wire Line
 Text Label 8750 1900 0    50   ~ 0
 TEST
 $Comp
-L Connector_Generic:Conn_02x02_Counter_Clockwise J?
+L Connector_Generic:Conn_02x02_Counter_Clockwise J1
 U 1 1 5C978C3D
 P 9600 2400
-F 0 "J?" H 9650 2617 50  0000 C CNN
+F 0 "J1" H 9650 2617 50  0000 C CNN
 F 1 "Header_02x02" H 9650 2526 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_2x02_P1.00mm_Vertical" H 9600 2400 50  0001 C CNN
 F 3 "~" H 9600 2400 50  0001 C CNN
@@ -1521,10 +1106,6 @@ Wire Wire Line
 	9900 2400 10150 2400
 Wire Wire Line
 	9900 2500 10150 2500
-Text Label 6700 1650 1    50   ~ 0
-DVCC
-Wire Wire Line
-	6700 1450 6700 1650
 Text Label 9150 2400 0    50   ~ 0
 DVCC
 Text Label 6700 3200 3    50   ~ 0
@@ -1538,20 +1119,232 @@ TEST
 Text Label 9900 2400 0    50   ~ 0
 ~RST
 Wire Wire Line
-	4400 4600 4400 4850
-Wire Wire Line
-	4500 6550 4500 6450
-Wire Wire Line
-	4500 6550 5250 6550
+	4450 2000 4450 2100
 $Comp
-L power:+3V3 #PWR?
-U 1 1 5CA0CC68
-P 4500 6450
-F 0 "#PWR?" H 4500 6300 50  0001 C CNN
-F 1 "+3V3" H 4515 6623 50  0000 C CNN
-F 2 "" H 4500 6450 50  0001 C CNN
-F 3 "" H 4500 6450 50  0001 C CNN
-	1    4500 6450
+L Device:C_Small C?
+U 1 1 5C9C2D99
+P 6700 1450
+F 0 "C?" H 6500 1500 50  0000 L CNN
+F 1 "0.1uF" H 6400 1400 50  0000 L CNN
+F 2 "" H 6700 1450 50  0001 C CNN
+F 3 "~" H 6700 1450 50  0001 C CNN
+	1    6700 1450
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C9DF52B
+P 6700 1250
+F 0 "#PWR?" H 6700 1100 50  0001 C CNN
+F 1 "+3V3" H 6715 1423 50  0000 C CNN
+F 2 "" H 6700 1250 50  0001 C CNN
+F 3 "" H 6700 1250 50  0001 C CNN
+	1    6700 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L electrospinner-rescue:Pololu_Breakout_A4988-Driver_Motor-electrospinner-rescue A?
+U 1 1 5C9F004C
+P 5050 6100
+F 0 "A?" H 5050 4900 50  0000 C CNN
+F 1 "Pololu_Breakout_A4988-Driver_Motor" H 5200 4800 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 5325 5350 50  0001 L CNN
+F 3 "" H 5150 5800 50  0001 C CNN
+	1    5050 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 6000 5750 6000
+Wire Wire Line
+	5550 6100 5750 6100
+Wire Wire Line
+	5550 6200 5750 6200
+Wire Wire Line
+	5550 6300 5750 6300
+Text Label 5650 6000 0    50   ~ 0
+1B
+Text Label 5650 6100 0    50   ~ 0
+1A
+Text Label 5650 6200 0    50   ~ 0
+2A
+Text Label 5650 6300 0    50   ~ 0
+2B
+Text Label 4100 6000 0    50   ~ 0
+~MOTOR_ENABLE
+Wire Wire Line
+	4100 6000 4650 6000
+Wire Wire Line
+	4650 5800 4100 5800
+Text Label 4100 5800 0    50   ~ 0
+~MOTOR_SLEEP
+Wire Wire Line
+	4650 5700 4100 5700
+Text Label 4100 5700 0    50   ~ 0
+~MOTOR_RESET
+Wire Wire Line
+	4650 6100 4100 6100
+Text Label 4100 6100 0    50   ~ 0
+MOTOR_STEP
+Wire Wire Line
+	4650 6200 4100 6200
+Text Label 4100 6200 0    50   ~ 0
+MOTOR_DIR
+Wire Wire Line
+	4650 6400 4100 6400
+Text Label 4100 6400 0    50   ~ 0
+MOTOR_MS1
+Wire Wire Line
+	4650 6500 4100 6500
+Text Label 4100 6500 0    50   ~ 0
+MOTOR_MS2
+Wire Wire Line
+	4650 6600 4100 6600
+Text Label 4100 6600 0    50   ~ 0
+MOTOR_MS3
+Wire Wire Line
+	5050 6900 5050 6950
+Wire Wire Line
+	5050 6950 5150 6950
+Wire Wire Line
+	5250 6950 5250 6900
+Wire Wire Line
+	5150 6950 5150 7000
+Connection ~ 5150 6950
+Wire Wire Line
+	5150 6950 5250 6950
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CA69CD7
+P 5150 7000
+F 0 "#PWR?" H 5150 6750 50  0001 C CNN
+F 1 "GNDD" H 5154 6845 50  0000 C CNN
+F 2 "" H 5150 7000 50  0001 C CNN
+F 3 "" H 5150 7000 50  0001 C CNN
+	1    5150 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 1250 6700 1350
+Wire Wire Line
+	6700 1550 6700 1650
+Wire Wire Line
+	4450 2300 4450 2350
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CA8CA41
+P 4450 2350
+F 0 "#PWR?" H 4450 2100 50  0001 C CNN
+F 1 "GNDD" H 4454 2195 50  0000 C CNN
+F 2 "" H 4450 2350 50  0001 C CNN
+F 3 "" H 4450 2350 50  0001 C CNN
+	1    4450 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1450 4450 1500
+Wire Wire Line
+	4200 1500 4200 1650
+Connection ~ 4450 1500
+Wire Wire Line
+	4450 1500 4450 1550
+$Comp
+L Device:C_Small C?
+U 1 1 5CA9D641
+P 4200 1750
+F 0 "C?" H 4000 1800 50  0000 L CNN
+F 1 "C_Small" H 3800 1750 50  0000 L CNN
+F 2 "" H 4200 1750 50  0001 C CNN
+F 3 "~" H 4200 1750 50  0001 C CNN
+	1    4200 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1850 4200 2000
+Wire Wire Line
+	4200 1500 4450 1500
+Wire Wire Line
+	4200 2000 4450 2000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5CABF2FF
+P 5050 5000
+F 0 "#PWR?" H 5050 4850 50  0001 C CNN
+F 1 "+3V3" H 5065 5173 50  0000 C CNN
+F 2 "" H 5050 5000 50  0001 C CNN
+F 3 "" H 5050 5000 50  0001 C CNN
+	1    5050 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5CAC22E5
+P 5050 5200
+F 0 "C?" H 4800 5250 50  0000 L CNN
+F 1 "0.1uF" H 4750 5150 50  0000 L CNN
+F 2 "" H 5050 5200 50  0001 C CNN
+F 3 "~" H 5050 5200 50  0001 C CNN
+	1    5050 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5100 5050 5000
+Wire Wire Line
+	5050 5400 5050 5300
+$Comp
+L power:+12V #PWR?
+U 1 1 5CAD491D
+P 5250 5000
+F 0 "#PWR?" H 5250 4850 50  0001 C CNN
+F 1 "+12V" H 5265 5173 50  0000 C CNN
+F 2 "" H 5250 5000 50  0001 C CNN
+F 3 "" H 5250 5000 50  0001 C CNN
+	1    5250 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5300 5250 5350
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CB0ABC7
+P 5700 5650
+F 0 "#PWR?" H 5700 5400 50  0001 C CNN
+F 1 "GNDD" H 5704 5495 50  0000 C CNN
+F 2 "" H 5700 5650 50  0001 C CNN
+F 3 "" H 5700 5650 50  0001 C CNN
+	1    5700 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5650 5700 5600
+$Comp
+L Device:C_Small C?
+U 1 1 5CAEF68C
+P 5250 5200
+F 0 "C?" H 5342 5246 50  0000 L CNN
+F 1 "0.1uF" H 5342 5155 50  0000 L CNN
+F 2 "" H 5250 5200 50  0001 C CNN
+F 3 "~" H 5250 5200 50  0001 C CNN
+	1    5250 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 5CB1FA67
+P 5700 5500
+F 0 "C?" H 5791 5546 50  0000 L CNN
+F 1 "100uF" H 5791 5455 50  0000 L CNN
+F 2 "" H 5700 5500 50  0001 C CNN
+F 3 "~" H 5700 5500 50  0001 C CNN
+	1    5700 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5400 5700 5350
+Wire Wire Line
+	5700 5350 5250 5350
+Connection ~ 5250 5350
+Wire Wire Line
+	5250 5350 5250 5400
+Wire Wire Line
+	5250 5100 5250 5000
 $EndSCHEMATC

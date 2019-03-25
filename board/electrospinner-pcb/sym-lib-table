@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name electrospinner-rescue)(type Legacy)(uri ${KIPRJMOD}/electrospinner-rescue.lib)(options "")(descr ""))
+  (lib (name pololu_a4988)(type Legacy)(uri ${KIPRJMOD}/pololu_a4988.lib)(options "")(descr ""))
 )

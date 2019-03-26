@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:electrospinner-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -763,7 +763,7 @@ MotorDIR
 Text Label 8400 2650 0    50   ~ 0
 ~MotorENABLE
 Text Label 8450 2750 0    50   ~ 0
-~MotorSLEEP
+~MotorRESET
 Wire Wire Line
 	8400 2750 8900 2750
 Wire Wire Line

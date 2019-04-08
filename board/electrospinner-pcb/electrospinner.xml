@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>/home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-pcb/electrospinner.sch</source>
-    <date>Mon 25 Mar 2019 07:53:54 PM EDT</date>
-    <tool>Eeschema 5.0.1</tool>
+    <date>Mon 08 Apr 2019 04:11:23 PM EDT</date>
+    <tool>Eeschema 5.1.0</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Electrospinner PCB</title>
         <company>PEDC</company>
-        <rev>2</rev>
-        <date>2019-03-25</date>
+        <rev>3</rev>
+        <date>2019-04-08</date>
         <source>electrospinner.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -31,7 +31,7 @@
       <tstamp>5C8B1DEA</tstamp>
     </comp>
     <comp ref="USB_B_Header1">
-      <value>USB_B_Header?</value>
+      <value>USB</value>
       <footprint>Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal</footprint>
       <datasheet> ~</datasheet>
       <fields>
@@ -262,6 +262,7 @@
     <comp ref="SW1">
       <value>ResetBTN</value>
       <footprint>Button_Switch_THT:SW_PUSH_6mm_H5mm</footprint>
+      <datasheet>~</datasheet>
       <fields>
         <field name="Status">resource-center</field>
       </fields>
@@ -279,18 +280,6 @@
       <libsource lib="electrospinner-rescue" part="Conn_02x02_Counter_Clockwise-Connector_Generic" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C978C3D</tstamp>
-    </comp>
-    <comp ref="A1">
-      <value>A4988_Breakout</value>
-      <footprint>Module:Pololu_Breakout-16_15.2x20.3mm</footprint>
-      <datasheet>https://www.pololu.com/product/2128</datasheet>
-      <fields>
-        <field name="MPN">2128</field>
-        <field name="Manufacturer">Pololu</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Pololu_Breakout_A4988-Driver_Motor-electrospinner-rescue" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C9F004C</tstamp>
     </comp>
     <comp ref="C10">
       <value>0.1uF</value>
@@ -400,6 +389,24 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5CBB0E85</tstamp>
     </comp>
+    <comp ref="A1">
+      <value>Pololu_Breakout_DRV8825</value>
+      <footprint>Module:Pololu_Breakout-16_15.2x20.3mm</footprint>
+      <datasheet>https://www.pololu.com/product/2977</datasheet>
+      <fields>
+        <field name="MPN">2977</field>
+        <field name="Manufacturer">Pololu</field>
+      </fields>
+      <libsource lib="Driver_Motor" part="Pololu_Breakout_DRV8825" description="Pololu Breakout Board, Stepper Driver DRV8825"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAC1863</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>0.1uF</value>
+      <libsource lib="electrospinner-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB79333</tstamp>
+    </comp>
   </components>
   <libparts>
     <libpart lib="Device" part="CP1_Small">
@@ -445,6 +452,36 @@
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Driver_Motor" part="Pololu_Breakout_DRV8825">
+      <description>Pololu Breakout Board, Stepper Driver DRV8825</description>
+      <docs>https://www.pololu.com/product/2982</docs>
+      <footprints>
+        <fp>Pololu*Breakout*15.2x20.3mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Pololu_Breakout_DRV8825</field>
+        <field name="Footprint">Module:Pololu_Breakout-16_15.2x20.3mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="~FLT" type="output"/>
+        <pin num="3" name="A2" type="output"/>
+        <pin num="4" name="A1" type="output"/>
+        <pin num="5" name="B1" type="output"/>
+        <pin num="6" name="B2" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VMOT" type="power_in"/>
+        <pin num="9" name="~EN" type="input"/>
+        <pin num="10" name="M0" type="input"/>
+        <pin num="11" name="M1" type="input"/>
+        <pin num="12" name="M2" type="input"/>
+        <pin num="13" name="~RST" type="input"/>
+        <pin num="14" name="~SLP" type="input"/>
+        <pin num="15" name="STEP" type="input"/>
+        <pin num="16" name="DIR" type="input"/>
       </pins>
     </libpart>
     <libpart lib="electrospinner-rescue" part="Barrel_Jack_MountingPin-Connector-electrospinner-rescue">
@@ -653,34 +690,6 @@
         <pin num="20" name="DVSS" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="electrospinner-rescue" part="Pololu_Breakout_A4988-Driver_Motor-electrospinner-rescue">
-      <footprints>
-        <fp>Pololu*Breakout*15.2x20.3mm*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">A</field>
-        <field name="Value">Pololu_Breakout_A4988-Driver_Motor-electrospinner-rescue</field>
-        <field name="Footprint">Module:Pololu_Breakout-16_15.2x20.3mm</field>
-      </fields>
-      <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="VDD" type="power_in"/>
-        <pin num="3" name="1B" type="output"/>
-        <pin num="4" name="1A" type="output"/>
-        <pin num="5" name="2A" type="output"/>
-        <pin num="6" name="2B" type="output"/>
-        <pin num="7" name="GND" type="power_in"/>
-        <pin num="8" name="VMOT" type="power_in"/>
-        <pin num="9" name="~ENABLE" type="input"/>
-        <pin num="10" name="MS1" type="input"/>
-        <pin num="11" name="MS2" type="input"/>
-        <pin num="12" name="MS3" type="input"/>
-        <pin num="13" name="~RESET" type="input"/>
-        <pin num="14" name="~SLEEP" type="input"/>
-        <pin num="15" name="STEP" type="input"/>
-        <pin num="16" name="DIR" type="input"/>
-      </pins>
-    </libpart>
     <libpart lib="electrospinner-rescue" part="R_Small_US-Device">
       <footprints>
         <fp>R_*</fp>
@@ -792,271 +801,268 @@
     <library logical="Device">
       <uri>/usr/share/kicad/library/Device.lib</uri>
     </library>
+    <library logical="Driver_Motor">
+      <uri>/usr/share/kicad/library/Driver_Motor.lib</uri>
+    </library>
     <library logical="electrospinner-rescue">
       <uri>/home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-pcb/electrospinner-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/DVSS">
-      <node ref="J1" pin="2"/>
+    <net code="1" name="/MotorMS1">
+      <node ref="U5" pin="10"/>
+      <node ref="A1" pin="10"/>
     </net>
-    <net code="2" name="/DVCC">
-      <node ref="J1" pin="1"/>
+    <net code="2" name="/MotorDIR">
+      <node ref="U5" pin="13"/>
+      <node ref="A1" pin="16"/>
     </net>
-    <net code="3" name="/TEST">
-      <node ref="J1" pin="3"/>
-      <node ref="U5" pin="17"/>
+    <net code="3" name="/MotorSLEEP">
+      <node ref="A1" pin="15"/>
     </net>
-    <net code="4" name="/1A">
-      <node ref="MotorConnector_Female1" pin="1"/>
-      <node ref="A1" pin="4"/>
+    <net code="4" name="/~MotorRST">
+      <node ref="A1" pin="13"/>
     </net>
-    <net code="5" name="/2A">
+    <net code="5" name="/~MotorSLEEP">
+      <node ref="U5" pin="8"/>
+      <node ref="A1" pin="14"/>
+    </net>
+    <net code="6" name="/~MotorENABLE">
+      <node ref="U5" pin="14"/>
+      <node ref="A1" pin="9"/>
+    </net>
+    <net code="7" name="/2B">
+      <node ref="MotorConnector_Female1" pin="6"/>
+      <node ref="A1" pin="6"/>
+    </net>
+    <net code="8" name="/2A">
       <node ref="A1" pin="5"/>
       <node ref="MotorConnector_Female1" pin="3"/>
     </net>
-    <net code="6" name="/MotorSTEP">
-      <node ref="U5" pin="9"/>
-    </net>
-    <net code="7" name="/MotorMS1">
-      <node ref="U5" pin="10"/>
-    </net>
-    <net code="8" name="/MotorMS2">
-      <node ref="U5" pin="11"/>
-    </net>
-    <net code="9" name="/MotorMS3">
-      <node ref="U5" pin="12"/>
-    </net>
-    <net code="10" name="/MotorDIR">
-      <node ref="U5" pin="13"/>
-    </net>
-    <net code="11" name="/~MotorENABLE">
-      <node ref="U5" pin="14"/>
-    </net>
-    <net code="12" name="/~MotorSLEEP">
-      <node ref="U5" pin="15"/>
-      <node ref="U5" pin="8"/>
-    </net>
-    <net code="13" name="/~MOTOR_ENABLE">
-      <node ref="A1" pin="9"/>
-    </net>
-    <net code="14" name="/MOTOR_MS1">
-      <node ref="A1" pin="10"/>
-    </net>
-    <net code="15" name="+3V3">
-      <node ref="C5" pin="1"/>
-      <node ref="SW1" pin="2"/>
-      <node ref="C7" pin="1"/>
-      <node ref="C10" pin="1"/>
-      <node ref="C9" pin="1"/>
-      <node ref="C8" pin="1"/>
-      <node ref="U1" pin="12"/>
-      <node ref="C6" pin="1"/>
-      <node ref="A1" pin="2"/>
-      <node ref="U1" pin="3"/>
-      <node ref="R6" pin="1"/>
+    <net code="9" name="+3V3">
       <node ref="R5" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="C7" pin="1"/>
       <node ref="R3" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="12"/>
       <node ref="Temp_Female1" pin="1"/>
-      <node ref="U5" pin="1"/>
       <node ref="L2" pin="2"/>
+      <node ref="U5" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="SW1" pin="2"/>
     </net>
-    <net code="16" name="/~RST">
-      <node ref="U5" pin="16"/>
+    <net code="10" name="/~RST">
+      <node ref="J1" pin="4"/>
       <node ref="U1" pin="11"/>
       <node ref="R2" pin="1"/>
       <node ref="R7" pin="1"/>
       <node ref="SW1" pin="1"/>
-      <node ref="J1" pin="4"/>
+      <node ref="U5" pin="16"/>
     </net>
-    <net code="17" name="/Vo,temp">
+    <net code="11" name="/TEST">
+      <node ref="U5" pin="17"/>
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="12" name="/DVSS">
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="13" name="/DVCC">
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="14" name="Net-(U5-Pad6)">
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="15" name="/MotorMS#">
+      <node ref="A1" pin="12"/>
+    </net>
+    <net code="16" name="/MotorMS2">
+      <node ref="U5" pin="11"/>
+      <node ref="A1" pin="11"/>
+    </net>
+    <net code="17" name="Net-(C4-Pad1)">
+      <node ref="U3" pin="9"/>
+      <node ref="C4" pin="1"/>
+    </net>
+    <net code="18" name="/Vo,temp">
       <node ref="U5" pin="2"/>
-      <node ref="Temp_Female1" pin="2"/>
       <node ref="R1" pin="1"/>
-    </net>
-    <net code="18" name="GNDD">
-      <node ref="U1" pin="13"/>
-      <node ref="R4" pin="2"/>
-      <node ref="C6" pin="2"/>
-      <node ref="U1" pin="5"/>
-      <node ref="R7" pin="2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="U3" pin="7"/>
-      <node ref="U3" pin="4"/>
-      <node ref="U3" pin="3"/>
-      <node ref="U3" pin="10"/>
-      <node ref="A1" pin="1"/>
-      <node ref="A1" pin="7"/>
-      <node ref="U5" pin="20"/>
-      <node ref="C4" pin="2"/>
-      <node ref="Barrel_Jack1" pin="MP"/>
-      <node ref="Barrel_Jack1" pin="2"/>
-      <node ref="USB_B_Header1" pin="5"/>
-      <node ref="USB_B_Header1" pin="4"/>
-      <node ref="C9" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="R1" pin="2"/>
-      <node ref="C8" pin="2"/>
-      <node ref="C1" pin="2"/>
+      <node ref="Temp_Female1" pin="2"/>
     </net>
     <net code="19" name="Net-(Pt1-Pad1)">
       <node ref="Temp_Male1" pin="1"/>
       <node ref="Pt1" pin="1"/>
     </net>
-    <net code="20" name="Net-(Pt1-Pad2)">
-      <node ref="Temp_Male1" pin="2"/>
-      <node ref="Pt1" pin="2"/>
-    </net>
-    <net code="21" name="/PCB_RX">
-      <node ref="U5" pin="4"/>
+    <net code="20" name="/PCB_RX">
       <node ref="U1" pin="4"/>
+      <node ref="U5" pin="4"/>
     </net>
-    <net code="22" name="/PCB_TX">
-      <node ref="U5" pin="3"/>
-      <node ref="U1" pin="1"/>
+    <net code="21" name="/MotorSTEP">
+      <node ref="U5" pin="9"/>
     </net>
-    <net code="23" name="/1B">
+    <net code="22" name="/MotorMS3">
+      <node ref="U5" pin="12"/>
+    </net>
+    <net code="23" name="/~MotorRESET">
+      <node ref="U5" pin="15"/>
+    </net>
+    <net code="24" name="Net-(U5-Pad5)">
+      <node ref="U5" pin="5"/>
+    </net>
+    <net code="25" name="/~MotorFLT">
+      <node ref="U5" pin="19"/>
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="26" name="Net-(U5-Pad18)">
+      <node ref="U5" pin="18"/>
+    </net>
+    <net code="27" name="Net-(U5-Pad7)">
+      <node ref="U5" pin="7"/>
+    </net>
+    <net code="28" name="+12V">
+      <node ref="U3" pin="8"/>
+      <node ref="U3" pin="1"/>
+      <node ref="A1" pin="8"/>
+      <node ref="C11" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="Barrel_Jack1" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="29" name="GNDD">
+      <node ref="Barrel_Jack1" pin="2"/>
+      <node ref="U3" pin="11"/>
+      <node ref="C2" pin="2"/>
+      <node ref="U3" pin="3"/>
+      <node ref="U3" pin="4"/>
+      <node ref="USB_B_Header1" pin="5"/>
+      <node ref="USB_B_Header1" pin="4"/>
+      <node ref="U5" pin="20"/>
+      <node ref="U3" pin="7"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U3" pin="10"/>
+      <node ref="Barrel_Jack1" pin="MP"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="A1" pin="7"/>
+      <node ref="C11" pin="2"/>
+      <node ref="A1" pin="1"/>
+      <node ref="U1" pin="5"/>
+      <node ref="C6" pin="2"/>
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="30" name="/1B">
       <node ref="MotorConnector_Female1" pin="4"/>
+      <node ref="A1" pin="4"/>
+    </net>
+    <net code="31" name="/1A">
+      <node ref="MotorConnector_Female1" pin="1"/>
       <node ref="A1" pin="3"/>
     </net>
-    <net code="24" name="Net-(C4-Pad1)">
-      <node ref="C4" pin="1"/>
-      <node ref="U3" pin="9"/>
-    </net>
-    <net code="25" name="+12V">
-      <node ref="U3" pin="1"/>
-      <node ref="U3" pin="11"/>
-      <node ref="U3" pin="8"/>
-      <node ref="C2" pin="1"/>
-      <node ref="C1" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="A1" pin="8"/>
-      <node ref="Barrel_Jack1" pin="1"/>
-    </net>
-    <net code="26" name="Net-(C10-Pad2)">
+    <net code="32" name="Net-(C10-Pad2)">
       <node ref="C10" pin="2"/>
       <node ref="R2" pin="2"/>
     </net>
-    <net code="27" name="/MOTOR_MS3">
-      <node ref="A1" pin="12"/>
-    </net>
-    <net code="28" name="/MOTOR_MS2">
-      <node ref="A1" pin="11"/>
-    </net>
-    <net code="29" name="/MOTOR_DIR">
-      <node ref="A1" pin="16"/>
-    </net>
-    <net code="30" name="/MOTOR_STEP">
-      <node ref="A1" pin="15"/>
-    </net>
-    <net code="31" name="/~MOTOR_RESET">
-      <node ref="A1" pin="13"/>
-    </net>
-    <net code="32" name="/~MOTOR_SLEEP">
-      <node ref="A1" pin="14"/>
-    </net>
-    <net code="33" name="/2B">
-      <node ref="MotorConnector_Female1" pin="6"/>
-      <node ref="A1" pin="6"/>
-    </net>
-    <net code="34" name="Net-(U5-Pad6)">
-      <node ref="U5" pin="6"/>
-    </net>
-    <net code="35" name="Net-(U5-Pad5)">
-      <node ref="U5" pin="5"/>
-    </net>
-    <net code="36" name="Net-(U5-Pad18)">
-      <node ref="U5" pin="18"/>
-    </net>
-    <net code="37" name="Net-(U5-Pad19)">
-      <node ref="U5" pin="19"/>
-    </net>
-    <net code="38" name="Net-(R3-Pad2)">
+    <net code="33" name="Net-(R3-Pad2)">
       <node ref="U3" pin="5"/>
       <node ref="R3" pin="2"/>
       <node ref="R4" pin="1"/>
     </net>
-    <net code="39" name="Net-(L2-Pad1)">
+    <net code="34" name="Net-(L2-Pad1)">
       <node ref="U3" pin="6"/>
       <node ref="L2" pin="1"/>
       <node ref="U3" pin="2"/>
     </net>
-    <net code="40" name="/D+">
+    <net code="35" name="/PCB_TX">
+      <node ref="U1" pin="1"/>
+      <node ref="U5" pin="3"/>
+    </net>
+    <net code="36" name="Net-(U1-Pad10)">
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="37" name="/D+">
       <node ref="USB_B_Header1" pin="3"/>
       <node ref="U1" pin="8"/>
     </net>
-    <net code="41" name="Net-(USB_B_Header1-Pad1)">
+    <net code="38" name="/D-">
+      <node ref="USB_B_Header1" pin="2"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="39" name="Net-(USB_B_Header1-Pad1)">
       <node ref="USB_B_Header1" pin="1"/>
     </net>
-    <net code="42" name="Net-(U5-Pad7)">
-      <node ref="U5" pin="7"/>
+    <net code="40" name="Net-(Pt1-Pad2)">
+      <node ref="Pt1" pin="2"/>
+      <node ref="Temp_Male1" pin="2"/>
     </net>
-    <net code="43" name="/D-">
-      <node ref="U1" pin="9"/>
-      <node ref="USB_B_Header1" pin="2"/>
-    </net>
-    <net code="44" name="/YEL">
-      <node ref="StepperMotor1" pin="5"/>
-      <node ref="MotorConnector_Male1" pin="5"/>
-    </net>
-    <net code="45" name="/BLK">
-      <node ref="MotorConnector_Male1" pin="4"/>
-      <node ref="StepperMotor1" pin="4"/>
-    </net>
-    <net code="46" name="/BLU">
+    <net code="41" name="/BLU">
       <node ref="MotorConnector_Male1" pin="3"/>
       <node ref="StepperMotor1" pin="3"/>
     </net>
-    <net code="47" name="/WHT">
-      <node ref="MotorConnector_Male1" pin="2"/>
-      <node ref="StepperMotor1" pin="2"/>
-    </net>
-    <net code="48" name="/RED">
+    <net code="42" name="/RED">
       <node ref="MotorConnector_Male1" pin="1"/>
       <node ref="StepperMotor1" pin="1"/>
     </net>
-    <net code="49" name="Net-(MotorConnector_Female1-Pad5)">
+    <net code="43" name="/WHT">
+      <node ref="MotorConnector_Male1" pin="2"/>
+      <node ref="StepperMotor1" pin="2"/>
+    </net>
+    <net code="44" name="/GRN">
+      <node ref="MotorConnector_Male1" pin="6"/>
+      <node ref="StepperMotor1" pin="6"/>
+    </net>
+    <net code="45" name="/YEL">
+      <node ref="MotorConnector_Male1" pin="5"/>
+      <node ref="StepperMotor1" pin="5"/>
+    </net>
+    <net code="46" name="/BLK">
+      <node ref="MotorConnector_Male1" pin="4"/>
+      <node ref="StepperMotor1" pin="4"/>
+    </net>
+    <net code="47" name="Net-(MotorConnector_Female1-Pad5)">
       <node ref="MotorConnector_Female1" pin="5"/>
     </net>
-    <net code="50" name="Net-(MotorConnector_Female1-Pad2)">
+    <net code="48" name="Net-(MotorConnector_Female1-Pad2)">
       <node ref="MotorConnector_Female1" pin="2"/>
     </net>
-    <net code="51" name="/GRN">
-      <node ref="StepperMotor1" pin="6"/>
-      <node ref="MotorConnector_Male1" pin="6"/>
-    </net>
-    <net code="52" name="Net-(U1-Pad2)">
-      <node ref="U1" pin="2"/>
-    </net>
-    <net code="53" name="/~RXLED">
-      <node ref="D1" pin="1"/>
-      <node ref="U1" pin="14"/>
-    </net>
-    <net code="54" name="Net-(U1-Pad15)">
-      <node ref="U1" pin="15"/>
-    </net>
-    <net code="55" name="Net-(U1-Pad6)">
-      <node ref="U1" pin="6"/>
-    </net>
-    <net code="56" name="Net-(U1-Pad16)">
-      <node ref="U1" pin="16"/>
-    </net>
-    <net code="57" name="Net-(U1-Pad10)">
-      <node ref="U1" pin="10"/>
-    </net>
-    <net code="58" name="/~TXLED">
-      <node ref="U1" pin="7"/>
-      <node ref="D2" pin="1"/>
-    </net>
-    <net code="59" name="Net-(D2-Pad2)">
+    <net code="49" name="Net-(D2-Pad2)">
       <node ref="R6" pin="2"/>
       <node ref="D2" pin="2"/>
     </net>
-    <net code="60" name="Net-(D1-Pad2)">
-      <node ref="D1" pin="2"/>
+    <net code="50" name="Net-(D1-Pad2)">
       <node ref="R5" pin="2"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="51" name="/~RXLED">
+      <node ref="D1" pin="1"/>
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="52" name="Net-(U1-Pad15)">
+      <node ref="U1" pin="15"/>
+    </net>
+    <net code="53" name="Net-(U1-Pad2)">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="54" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="55" name="Net-(U1-Pad16)">
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="56" name="/~TXLED">
+      <node ref="D2" pin="1"/>
+      <node ref="U1" pin="7"/>
     </net>
   </nets>
 </export>

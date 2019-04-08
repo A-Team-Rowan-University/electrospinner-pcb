@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
 LIBS:electrospinner-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Electrospinner PCB"
-Date "2019-03-25"
-Rev "2"
+Date "2019-04-08"
+Rev "3"
 Comp "PEDC"
 Comment1 ""
 Comment2 ""
@@ -24,7 +24,6 @@ F 2 "" H 10500 850 50  0001 L CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15bb/0900766b815bb283.pdf" H 10450 1050 50  0001 C CNN
 F 4 "0900766b815bb283" H 0   0   50  0001 C CNN "MPN"
 F 5 "Emea" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "" H 0   0   50  0001 C CNN "Status"
 	1    10450 1050
 	1    0    0    -1  
 $EndComp
@@ -33,7 +32,7 @@ L electrospinner-rescue:USB_B-Connector USB_B_Header1
 U 1 1 5C8B2315
 P 2050 6900
 F 0 "USB_B_Header1" H 2050 7250 50  0000 C CNN
-F 1 "USB_B_Header?" H 2050 7350 50  0000 C CNN
+F 1 "USB" H 2050 7350 50  0000 C CNN
 F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 2200 6850 50  0001 C CNN
 F 3 " ~" H 2200 6850 50  0001 C CNN
 F 4 "resource-center" H 600 100 50  0001 C CNN "Status"
@@ -72,7 +71,6 @@ F 1 "MSP430G2553IPW20" H 7250 3200 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5250 1900 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/msp430g2553.pdf" H 6650 2450 50  0001 C CNN
 F 4 "MSP430G2553IPW20" H 0   0   50  0001 C CNN "MPN"
-F 5 "" H 0   0   50  0001 C CNN "Status"
 	1    6700 2450
 	1    0    0    -1  
 $EndComp
@@ -107,7 +105,6 @@ F 1 "TPS62147" H 1650 1776 50  0000 C CNN
 F 2 "footprints:TPS62147RGXR" H 1650 1900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/tps62147" H 1650 1900 50  0001 C CNN
 F 4 "TPS62147RGXR" H -700 50  50  0001 C CNN "MPN"
-F 5 "" H -700 50  50  0001 C CNN "Status"
 	1    1650 1900
 	1    0    0    -1  
 $EndComp
@@ -116,13 +113,13 @@ Wire Wire Line
 $Comp
 L electrospinner-rescue:C_Small-Device-electrospinner-rescue C2
 U 1 1 5C8E53A4
-P 900 2750
-F 0 "C2" H 700 2800 50  0000 L CNN
-F 1 "10uF" H 650 2700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 900 2750 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 900 2750 50  0001 C CNN
-F 4 "C0805X106K8RACAUTO" H -700 50  50  0001 C CNN "MPN"
-	1    900  2750
+P 900 2400
+F 0 "C2" H 700 2450 50  0000 L CNN
+F 1 "10uF" H 650 2350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 900 2400 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 900 2400 50  0001 C CNN
+F 4 "C0805X106K8RACAUTO" H -700 -300 50  0001 C CNN "MPN"
+	1    900  2400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -134,17 +131,6 @@ F 1 "GNDD" H 1054 2695 50  0001 C CNN
 F 2 "" H 1050 2850 50  0001 C CNN
 F 3 "" H 1050 2850 50  0001 C CNN
 	1    1050 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L electrospinner-rescue:GNDD-power #PWR016
-U 1 1 5C8E53B2
-P 2100 2850
-F 0 "#PWR016" H 2100 2600 50  0001 C CNN
-F 1 "GNDD" H 2104 2695 50  0001 C CNN
-F 2 "" H 2100 2850 50  0001 C CNN
-F 3 "" H 2100 2850 50  0001 C CNN
-	1    2100 2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -199,7 +185,6 @@ F 1 "2.2uF" H 2992 2505 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 2900 2550 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/40/X7RDielectric-777024.pdf" H 2900 2550 50  0001 C CNN
 F 4 "08056C225KAT2A" H -700 50  50  0001 C CNN "MPN"
-F 5 "" H -700 50  50  0001 C CNN "Manufacturer"
 	1    2900 2550
 	1    0    0    -1  
 $EndComp
@@ -215,26 +200,16 @@ F 3 "" H 2900 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2100 2800 2050 2800
-Wire Wire Line
-	2100 2850 2100 2800
-Wire Wire Line
-	2100 2600 2100 2700
-Wire Wire Line
-	2100 2800 2100 2700
-Connection ~ 2100 2800
-Connection ~ 2100 2700
-Wire Wire Line
 	1050 2700 1050 2850
 $Comp
 L electrospinner-rescue:GNDD-power #PWR08
 U 1 1 5C8E53F0
-P 900 2850
-F 0 "#PWR08" H 900 2600 50  0001 C CNN
-F 1 "GNDD" H 904 2695 50  0001 C CNN
-F 2 "" H 900 2850 50  0001 C CNN
-F 3 "" H 900 2850 50  0001 C CNN
-	1    900  2850
+P 900 2550
+F 0 "#PWR08" H 900 2300 50  0001 C CNN
+F 1 "GNDD" H 904 2395 50  0001 C CNN
+F 2 "" H 900 2550 50  0001 C CNN
+F 3 "" H 900 2550 50  0001 C CNN
+	1    900  2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -323,30 +298,30 @@ Wire Wire Line
 	2350 6900 2500 6900
 Wire Wire Line
 	2350 7000 2500 7000
-Text Label 2400 6900 0    50   ~ 0
+Text Label 2400 6900 0    50   ~ 10
 D+
-Text Label 2400 7000 0    50   ~ 0
+Text Label 2400 7000 0    50   ~ 10
 D-
 Wire Wire Line
 	1350 5350 1200 5350
-Text Label 1200 5350 0    50   ~ 0
+Text Label 1200 5350 0    50   ~ 10
 ~RST
 Wire Wire Line
 	1350 5050 1200 5050
-Text Label 1200 5050 0    50   ~ 0
+Text Label 1200 5050 0    50   ~ 10
 D-
 Wire Wire Line
 	1350 5150 1200 5150
-Text Label 1200 5150 0    50   ~ 0
+Text Label 1200 5150 0    50   ~ 10
 D+
 NoConn ~ 1350 4750
 Wire Wire Line
 	2750 4750 3050 4750
-Text Label 2750 4750 0    50   ~ 0
+Text Label 2750 4750 0    50   ~ 10
 PCB_TX
 Wire Wire Line
 	2750 4850 3050 4850
-Text Label 2750 4850 0    50   ~ 0
+Text Label 2750 4850 0    50   ~ 10
 PCB_RX
 NoConn ~ 2750 5550
 NoConn ~ 2750 5050
@@ -370,7 +345,7 @@ Connection ~ 2050 4450
 Wire Wire Line
 	2050 4400 2050 4450
 NoConn ~ 2750 5250
-Text Label 2800 5350 0    50   ~ 0
+Text Label 2800 5350 0    50   ~ 10
 ~RXLED
 $Comp
 L electrospinner-rescue:LED_Small-Device D1
@@ -448,7 +423,7 @@ F 3 "" H 3650 5250 50  0001 C CNN
 	1    3650 5250
 	1    0    0    -1  
 $EndComp
-Text Label 2800 5450 0    50   ~ 0
+Text Label 2800 5450 0    50   ~ 10
 ~TXLED
 $Comp
 L electrospinner-rescue:FT230XS-Interface_USB U1
@@ -459,7 +434,6 @@ F 1 "FT230XS" H 2400 5800 50  0000 C CNN
 F 2 "Package_SO:SSOP-16_3.9x4.9mm_P0.635mm" H 2500 4500 50  0001 C CNN
 F 3 "http://www.ftdichip.com/Products/ICs/FT230X.html" H 2050 5150 50  0001 C CNN
 F 4 "FT230XS-R" H 0   0   50  0001 C CNN "MPN"
-F 5 "" H 0   0   50  0001 C CNN "Status"
 	1    2050 5150
 	1    0    0    -1  
 $EndComp
@@ -496,9 +470,8 @@ F 0 "StepperMotor1" H 8737 5073 50  0000 L CNN
 F 1 "SY42STH47-1206A" H 8737 4982 50  0000 L CNN
 F 2 "" H 8560 4940 50  0001 C CNN
 F 3 "https://www.pololu.com/product/1200/" H 8560 4940 50  0001 C CNN
-F 4 "" H 0   -550 50  0001 C CNN "Status"
-F 5 "1200" H 0   0   50  0001 C CNN "MPN"
-F 6 "Pololu" H 0   0   50  0001 C CNN "Manufacturer"
+F 4 "1200" H 0   0   50  0001 C CNN "MPN"
+F 5 "Pololu" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8550 4950
 	1    0    0    -1  
 $EndComp
@@ -528,27 +501,27 @@ F 4 "resource-center" H 0   -550 50  0001 C CNN "Status"
 $EndComp
 Wire Wire Line
 	8250 4850 8100 4850
-Text Label 8100 4850 0    50   ~ 0
+Text Label 8100 4850 0    50   ~ 10
 BLK
 Wire Wire Line
 	8100 4950 8250 4950
-Text Label 8100 4950 0    50   ~ 0
+Text Label 8100 4950 0    50   ~ 10
 YEL
 Wire Wire Line
 	8100 5050 8250 5050
-Text Label 8100 5050 0    50   ~ 0
+Text Label 8100 5050 0    50   ~ 10
 GRN
 Wire Wire Line
 	8550 4650 8550 4500
-Text Label 8550 4650 1    50   ~ 0
+Text Label 8550 4650 1    50   ~ 10
 WHT
 Wire Wire Line
 	8450 4650 8450 4500
-Text Label 8450 4650 1    50   ~ 0
+Text Label 8450 4650 1    50   ~ 10
 RED
 Wire Wire Line
 	8650 4650 8650 4500
-Text Label 8650 4650 1    50   ~ 0
+Text Label 8650 4650 1    50   ~ 10
 BLU
 Wire Wire Line
 	7700 4650 7850 4650
@@ -562,31 +535,31 @@ Wire Wire Line
 	7700 5050 7850 5050
 Wire Wire Line
 	7700 5150 7850 5150
-Text Label 7700 4650 0    50   ~ 0
+Text Label 7700 4650 0    50   ~ 10
 RED
-Text Label 7700 4750 0    50   ~ 0
+Text Label 7700 4750 0    50   ~ 10
 WHT
-Text Label 7700 4850 0    50   ~ 0
+Text Label 7700 4850 0    50   ~ 10
 BLU
-Text Label 7700 4950 0    50   ~ 0
+Text Label 7700 4950 0    50   ~ 10
 BLK
-Text Label 7700 5050 0    50   ~ 0
+Text Label 7700 5050 0    50   ~ 10
 YEL
-Text Label 7700 5150 0    50   ~ 0
+Text Label 7700 5150 0    50   ~ 10
 GRN
 NoConn ~ 7000 5050
 NoConn ~ 7000 4750
-Text Label 6850 5150 0    50   ~ 0
+Text Label 6850 5150 0    50   ~ 10
 2B
-Text Label 6850 4950 0    50   ~ 0
+Text Label 6850 4950 0    50   ~ 10
 1B
-Text Label 6850 4850 0    50   ~ 0
+Text Label 6850 4850 0    50   ~ 10
 2A
-Text Label 6850 4650 0    50   ~ 0
+Text Label 6850 4650 0    50   ~ 10
 1A
-Text Label 8600 2150 0    50   ~ 0
+Text Label 8900 2150 2    50   ~ 10
 PCB_TX
-Text Label 8600 2250 0    50   ~ 0
+Text Label 8900 2250 2    50   ~ 10
 PCB_RX
 $Comp
 L electrospinner-rescue:Conn_01x02_Female-Connector Temp_Female1
@@ -661,7 +634,7 @@ Wire Wire Line
 Wire Wire Line
 	9050 1100 8700 1100
 Connection ~ 9050 1100
-Text Label 8700 1100 0    50   ~ 0
+Text Label 8700 1100 0    50   ~ 10
 Vo,temp
 $Comp
 L electrospinner-rescue:C_Small-Device C4
@@ -698,14 +671,6 @@ Wire Wire Line
 	1200 2850 1200 2800
 Wire Wire Line
 	1200 2800 1250 2800
-Wire Wire Line
-	900  2300 900  2500
-Connection ~ 900  2300
-Wire Wire Line
-	900  2500 1250 2500
-Connection ~ 900  2500
-Wire Wire Line
-	900  2500 900  2650
 $Comp
 L electrospinner-rescue:R_Small_US-Device R7
 U 1 1 5CA15E6A
@@ -725,7 +690,7 @@ P 4450 1750
 F 0 "SW1" V 4550 2050 50  0000 R CNN
 F 1 "ResetBTN" V 4450 2250 50  0000 R CNN
 F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 4450 1950 50  0001 C CNN
-F 3 "" H 4450 1950 50  0001 C CNN
+F 3 "~" H 4450 1950 50  0001 C CNN
 F 4 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    4450 1750
 	0    1    -1   0   
@@ -744,30 +709,22 @@ F 3 "" H 4450 1450 50  0001 C CNN
 	1    4450 1450
 	1    0    0    -1  
 $EndComp
-Text Label 8600 2050 0    50   ~ 0
+Text Label 8900 2050 2    50   ~ 10
 Vo,temp
 Wire Wire Line
 	4450 2000 5000 2000
-Text Label 4600 2150 0    50   ~ 0
+Text Label 4600 2150 0    50   ~ 10
 ~MotorSLEEP
-Text Label 4600 2250 0    50   ~ 0
+Text Label 4600 2250 0    50   ~ 10
 MotorSTEP
-Text Label 4600 2350 0    50   ~ 0
+Text Label 4600 2350 0    50   ~ 10
 MotorMS1
-Text Label 4600 2450 0    50   ~ 0
+Text Label 4600 2450 0    50   ~ 10
 MotorMS2
-Text Label 4600 2550 0    50   ~ 0
+Text Label 4600 2550 0    50   ~ 10
 MotorMS3
-Text Label 4600 2650 0    50   ~ 0
+Text Label 4600 2650 0    50   ~ 10
 MotorDIR
-Text Label 8400 2650 0    50   ~ 0
-~MotorENABLE
-Text Label 8450 2750 0    50   ~ 0
-~MotorSLEEP
-Wire Wire Line
-	8400 2750 8900 2750
-Wire Wire Line
-	8400 2650 8900 2650
 Wire Wire Line
 	4600 2650 5000 2650
 Wire Wire Line
@@ -794,11 +751,11 @@ Wire Wire Line
 	7000 4850 6850 4850
 Wire Wire Line
 	7000 4650 6850 4650
-Text Label 4600 2000 0    50   ~ 0
+Text Label 4600 2000 0    50   ~ 10
 ~RST
 Wire Wire Line
 	8400 1900 8900 1900
-Text Label 8750 1900 0    50   ~ 0
+Text Label 8900 1900 2    50   ~ 10
 TEST
 $Comp
 L electrospinner-rescue:Conn_02x02_Counter_Clockwise-Connector_Generic J1
@@ -820,13 +777,13 @@ Wire Wire Line
 	10300 2400 10550 2400
 Wire Wire Line
 	10300 2500 10550 2500
-Text Label 9550 2400 0    50   ~ 0
+Text Label 9550 2400 0    50   ~ 10
 DVCC
-Text Label 9550 2500 0    50   ~ 0
+Text Label 9550 2500 0    50   ~ 10
 DVSS
-Text Label 10300 2500 0    50   ~ 0
+Text Label 10300 2500 0    50   ~ 10
 TEST
-Text Label 10300 2400 0    50   ~ 0
+Text Label 10300 2400 0    50   ~ 10
 ~RST
 Wire Wire Line
 	4450 2000 4450 2100
@@ -841,74 +798,50 @@ F 3 "" H 6700 1600 50  0001 C CNN
 	1    6700 1600
 	1    0    0    -1  
 $EndComp
-$Comp
-L electrospinner-rescue:Pololu_Breakout_A4988-Driver_Motor-electrospinner-rescue A1
-U 1 1 5C9F004C
-P 5350 4850
-F 0 "A1" H 5850 4050 50  0000 C CNN
-F 1 "A4988_Breakout" H 5900 3950 50  0000 C CNN
-F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 5625 4100 50  0001 L CNN
-F 3 "https://www.pololu.com/product/2128" H 5450 4550 50  0001 C CNN
-F 4 "2128" H 0   0   50  0001 C CNN "MPN"
-F 5 "Pololu" H 0   0   50  0001 C CNN "Manufacturer"
-	1    5350 4850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	5850 4750 6050 4750
+	5800 4800 6000 4800
 Wire Wire Line
-	5850 4850 6050 4850
+	5800 5000 6000 5000
 Wire Wire Line
-	5850 4950 6050 4950
-Wire Wire Line
-	5850 5050 6050 5050
-Text Label 5950 4750 0    50   ~ 0
-1B
-Text Label 5950 4850 0    50   ~ 0
-1A
-Text Label 5950 4950 0    50   ~ 0
+	5800 5100 6000 5100
+Text Label 5900 5000 0    50   ~ 10
 2A
-Text Label 5950 5050 0    50   ~ 0
+Text Label 5900 5100 0    50   ~ 10
 2B
-Text Label 4400 4750 0    50   ~ 0
-~MOTOR_ENABLE
+Text Label 4450 4800 0    50   ~ 10
+~MotorENABLE
 Wire Wire Line
-	4400 4750 4950 4750
+	4450 4800 5000 4800
 Wire Wire Line
-	4950 4550 4400 4550
-Text Label 4400 4550 0    50   ~ 0
-~MOTOR_SLEEP
+	5000 4600 4450 4600
+Text Label 4450 4600 0    50   ~ 10
+~MotorSLEEP
 Wire Wire Line
-	4950 4450 4400 4450
-Text Label 4400 4450 0    50   ~ 0
-~MOTOR_RESET
+	5000 4500 4450 4500
+Text Label 4450 4500 0    50   ~ 10
+~MotorRST
 Wire Wire Line
-	4950 4850 4400 4850
-Text Label 4400 4850 0    50   ~ 0
-MOTOR_STEP
+	5000 4900 4450 4900
+Text Label 4450 4900 0    50   ~ 10
+MotorSLEEP
 Wire Wire Line
-	4950 4950 4400 4950
-Text Label 4400 4950 0    50   ~ 0
-MOTOR_DIR
+	5000 5000 4450 5000
+Text Label 4450 5000 0    50   ~ 10
+MotorDIR
 Wire Wire Line
-	4950 5150 4400 5150
-Text Label 4400 5150 0    50   ~ 0
-MOTOR_MS1
+	5000 5200 4450 5200
+Text Label 4450 5200 0    50   ~ 10
+MotorMS1
 Wire Wire Line
-	4950 5250 4400 5250
-Text Label 4400 5250 0    50   ~ 0
-MOTOR_MS2
+	5000 5300 4450 5300
+Text Label 4450 5300 0    50   ~ 10
+MotorMS2
 Wire Wire Line
-	4950 5350 4400 5350
-Text Label 4400 5350 0    50   ~ 0
-MOTOR_MS3
-Wire Wire Line
-	5350 5700 5450 5700
+	5000 5400 4450 5400
+Text Label 4450 5400 0    50   ~ 10
+MotorMS#
 Wire Wire Line
 	5450 5700 5450 5750
-Connection ~ 5450 5700
-Wire Wire Line
-	5450 5700 5550 5700
 $Comp
 L electrospinner-rescue:GNDD-power #PWR0102
 U 1 1 5CA69CD7
@@ -952,25 +885,14 @@ F 5 "TDK" H 0   0   50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L electrospinner-rescue:+3V3-power #PWR0104
-U 1 1 5CABF2FF
-P 5350 4100
-F 0 "#PWR0104" H 5350 3950 50  0001 C CNN
-F 1 "+3V3" H 5365 4273 50  0000 C CNN
-F 2 "" H 5350 4100 50  0001 C CNN
-F 3 "" H 5350 4100 50  0001 C CNN
-	1    5350 4100
-	1    0    0    -1  
-$EndComp
-$Comp
 L electrospinner-rescue:+12V-power #PWR0105
 U 1 1 5CAD491D
-P 5550 4100
-F 0 "#PWR0105" H 5550 3950 50  0001 C CNN
-F 1 "+12V" H 5565 4273 50  0000 C CNN
-F 2 "" H 5550 4100 50  0001 C CNN
-F 3 "" H 5550 4100 50  0001 C CNN
-	1    5550 4100
+P 5400 4150
+F 0 "#PWR0105" H 5400 4000 50  0001 C CNN
+F 1 "+12V" H 5415 4323 50  0000 C CNN
+F 2 "" H 5400 4150 50  0001 C CNN
+F 3 "" H 5400 4150 50  0001 C CNN
+	1    5400 4150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -998,32 +920,29 @@ $EndComp
 $Comp
 L power:+12V #PWR0108
 U 1 1 5C9F799D
-P 1900 850
-F 0 "#PWR0108" H 1900 700 50  0001 C CNN
-F 1 "+12V" H 1915 1023 50  0000 C CNN
-F 2 "" H 1900 850 50  0001 C CNN
-F 3 "" H 1900 850 50  0001 C CNN
-	1    1900 850 
+P 1650 850
+F 0 "#PWR0108" H 1650 700 50  0001 C CNN
+F 1 "+12V" H 1665 1023 50  0000 C CNN
+F 2 "" H 1650 850 50  0001 C CNN
+F 3 "" H 1650 850 50  0001 C CNN
+	1    1650 850 
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDD #PWR0109
 U 1 1 5CA3A55F
-P 1900 1250
-F 0 "#PWR0109" H 1900 1000 50  0001 C CNN
-F 1 "GNDD" H 1904 1095 50  0000 C CNN
-F 2 "" H 1900 1250 50  0001 C CNN
-F 3 "" H 1900 1250 50  0001 C CNN
-	1    1900 1250
+P 1650 1250
+F 0 "#PWR0109" H 1650 1000 50  0001 C CNN
+F 1 "GNDD" H 1654 1095 50  0000 C CNN
+F 2 "" H 1650 1250 50  0001 C CNN
+F 3 "" H 1650 1250 50  0001 C CNN
+	1    1650 1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6700 1600 6700 1650
 Wire Wire Line
 	6700 3250 6700 3200
-NoConn ~ 5000 2750
-NoConn ~ 5000 2850
-NoConn ~ 8400 2350
 NoConn ~ 8400 2450
 $Comp
 L Device:R_Small_US R1
@@ -1043,14 +962,14 @@ Wire Wire Line
 $Comp
 L Device:C_Small C1
 U 1 1 5C9F7AD0
-P 1900 1050
-F 0 "C1" H 1700 1100 50  0000 L CNN
-F 1 "0.1uF" H 1600 1000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1900 1050 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf" H 1900 1050 50  0001 C CNN
-F 4 "AS0805KKX7R9BB104" H 0   0   50  0001 C CNN "MPN"
-F 5 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
-	1    1900 1050
+P 1650 1050
+F 0 "C1" H 1450 1100 50  0000 L CNN
+F 1 "0.1uF" H 1350 1000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1650 1050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf" H 1650 1050 50  0001 C CNN
+F 4 "AS0805KKX7R9BB104" H -250 0   50  0001 C CNN "MPN"
+F 5 "Yageo" H -250 0   50  0001 C CNN "Manufacturer"
+	1    1650 1050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1065,44 +984,24 @@ F 3 "" H 2800 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 4100 5350 4150
-Wire Wire Line
-	5550 4100 5550 4150
-Wire Wire Line
-	5550 5700 5550 5650
-Wire Wire Line
-	5350 5650 5350 5700
+	5400 4150 5400 4200
 $Comp
 L Device:CP1_Small C3
 U 1 1 5CB07F1C
-P 2300 1050
-F 0 "C3" H 2100 1100 50  0000 L CNN
-F 1 "100uF" H 2000 1000 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 2300 1050 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/420/United-Chemi-Con-776012.pdf" H 2300 1050 50  0001 C CNN
-F 4 "EMZR250ARA101MF61G" H 0   0   50  0001 C CNN "MPN"
-F 5 "United Chemi-Con" H 0   0   50  0001 C CNN "Manufacturer"
-	1    2300 1050
+P 2400 1050
+F 0 "C3" H 2200 1100 50  0000 L CNN
+F 1 "100uF" H 2100 1000 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 2400 1050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/420/United-Chemi-Con-776012.pdf" H 2400 1050 50  0001 C CNN
+F 4 "EMZR250ARA101MF61G" H 100 0   50  0001 C CNN "MPN"
+F 5 "United Chemi-Con" H 100 0   50  0001 C CNN "Manufacturer"
+	1    2400 1050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1900 1150 1900 1200
+	2400 900  2400 950 
 Wire Wire Line
-	1900 850  1900 900 
-Wire Wire Line
-	2300 900  1900 900 
-Connection ~ 1900 900 
-Wire Wire Line
-	1900 900  1900 950 
-Wire Wire Line
-	2300 900  2300 950 
-Wire Wire Line
-	2300 1150 2300 1200
-Wire Wire Line
-	2300 1200 1900 1200
-Connection ~ 1900 1200
-Wire Wire Line
-	1900 1200 1900 1250
+	2400 1150 2400 1200
 $Comp
 L Device:C_Small C5
 U 1 1 5CB3CDCC
@@ -1227,4 +1126,125 @@ Wire Wire Line
 	3900 2000 4100 2000
 Wire Wire Line
 	4450 2000 4300 2000
+Wire Wire Line
+	5400 5600 5400 5700
+Wire Wire Line
+	5400 5700 5450 5700
+Wire Wire Line
+	5450 5700 5500 5700
+Wire Wire Line
+	5500 5700 5500 5600
+Connection ~ 5450 5700
+Text Label 5900 4800 0    50   ~ 10
+1A
+Text Label 5900 4700 0    50   ~ 10
+1B
+Wire Wire Line
+	5800 4700 6000 4700
+$Comp
+L Driver_Motor:Pololu_Breakout_DRV8825 A1
+U 1 1 5CAC1863
+P 5400 4800
+F 0 "A1" H 5850 5300 50  0000 C CNN
+F 1 "Pololu_Breakout_DRV8825" H 6250 5200 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 5600 4000 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2977" H 5500 4500 50  0001 C CNN
+F 4 "2977" H 0   0   50  0001 C CNN "MPN"
+F 5 "Pololu" H 0   0   50  0001 C CNN "Manufacturer"
+	1    5400 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4400 4450 4400
+Text Label 4450 4400 0    50   ~ 10
+~MotorFLT
+NoConn ~ 5000 2850
+Text Label 8950 2650 2    50   ~ 10
+~MotorENABLE
+Wire Wire Line
+	5000 2750 4600 2750
+Text Label 4600 2750 0    50   ~ 10
+~MotorFLT
+NoConn ~ 8400 2350
+Text Label 8950 2750 2    50   ~ 10
+~MotorRESET
+Wire Wire Line
+	1650 1150 1650 1200
+Wire Wire Line
+	1650 850  1650 900 
+$Comp
+L electrospinner-rescue:C_Small-Device C11
+U 1 1 5CB79333
+P 2050 1050
+F 0 "C11" H 1900 1100 50  0000 L CNN
+F 1 "0.1uF" H 1800 950 50  0000 L CNN
+F 2 "" H 2050 1050 50  0001 C CNN
+F 3 "" H 2050 1050 50  0001 C CNN
+	1    2050 1050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1650 900 
+Wire Wire Line
+	1650 900  1650 950 
+Connection ~ 1650 1200
+Wire Wire Line
+	1650 1200 1650 1250
+Wire Wire Line
+	1650 900  2050 900 
+Wire Wire Line
+	1650 1200 2050 1200
+Wire Wire Line
+	2050 1150 2050 1200
+Connection ~ 2050 1200
+Wire Wire Line
+	2050 1200 2400 1200
+Wire Wire Line
+	2050 950  2050 900 
+Connection ~ 2050 900 
+Wire Wire Line
+	2050 900  2400 900 
+Connection ~ 900  2300
+Wire Wire Line
+	1250 2500 1050 2500
+Wire Wire Line
+	1050 2500 1050 2550
+$Comp
+L electrospinner-rescue:GNDD-power #PWR0104
+U 1 1 5CBD14C8
+P 1050 2550
+F 0 "#PWR0104" H 1050 2300 50  0001 C CNN
+F 1 "GNDD" H 1054 2395 50  0001 C CNN
+F 2 "" H 1050 2550 50  0001 C CNN
+F 3 "" H 1050 2550 50  0001 C CNN
+	1    1050 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2550 900  2500
+Wire Wire Line
+	2100 2850 2100 2800
+Wire Wire Line
+	2100 2800 2050 2800
+$Comp
+L electrospinner-rescue:GNDD-power #PWR016
+U 1 1 5C8E53B2
+P 2100 2850
+F 0 "#PWR016" H 2100 2600 50  0001 C CNN
+F 1 "GNDD" H 2104 2695 50  0001 C CNN
+F 2 "" H 2100 2850 50  0001 C CNN
+F 3 "" H 2100 2850 50  0001 C CNN
+	1    2100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2600 2100 2700
+Connection ~ 2100 2700
+Connection ~ 2100 2800
+Wire Wire Line
+	2100 2800 2100 2700
+NoConn ~ 8400 2550
+Wire Wire Line
+	8400 2650 8950 2650
+Wire Wire Line
+	8400 2750 8950 2750
 $EndSCHEMATC

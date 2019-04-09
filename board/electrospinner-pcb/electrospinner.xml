@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-pcb/electrospinner.sch</source>
-    <date>Mon 08 Apr 2019 04:11:23 PM EDT</date>
+    <date>Tue 09 Apr 2019 01:19:35 PM EDT</date>
     <tool>Eeschema 5.1.0</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -403,6 +403,12 @@
     </comp>
     <comp ref="C11">
       <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/400/lcc_commercial_lowprofile_en-520027.pdf</datasheet>
+      <fields>
+        <field name="MPN">CGB1T3X6S0G104M022BB</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
       <libsource lib="electrospinner-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5CB79333</tstamp>

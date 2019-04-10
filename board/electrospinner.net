@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source /home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-pcb/electrospinner.sch)
-    (date "Tue 09 Apr 2019 10:45:09 PM EDT")
+    (source /home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner.sch)
+    (date "Tue 09 Apr 2019 11:48:19 PM EDT")
     (tool "Eeschema 5.1.0")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -227,7 +227,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5CA15E6A))
     (comp (ref J4)
-      (value TempSensor)
+      (value TempSensorConnector)
       (footprint Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical)
       (datasheet ~)
       (fields
@@ -634,7 +634,7 @@
     (library (logical Driver_Motor)
       (uri /usr/share/kicad/library/Driver_Motor.lib))
     (library (logical electrospinner-rescue)
-      (uri /home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-pcb/electrospinner-rescue.lib)))
+      (uri /home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-rescue.lib)))
   (nets
     (net (code 1) (name GNDD)
       (node (ref R7) (pin 2))

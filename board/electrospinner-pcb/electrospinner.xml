@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>/home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner-pcb/electrospinner.sch</source>
-    <date>Tue 09 Apr 2019 01:19:35 PM EDT</date>
+    <date>Tue 09 Apr 2019 10:48:24 PM EDT</date>
     <tool>Eeschema 5.1.0</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Electrospinner PCB</title>
         <company>PEDC</company>
-        <rev>3</rev>
-        <date>2019-04-08</date>
+        <rev>5</rev>
+        <date>2019-04-09</date>
         <source>electrospinner.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -19,51 +19,18 @@
     </sheet>
   </design>
   <components>
-    <comp ref="Pt1">
-      <value>RS Pro 2371607</value>
-      <datasheet>https://docs-emea.rs-online.com/webdocs/15bb/0900766b815bb283.pdf</datasheet>
-      <fields>
-        <field name="MPN">0900766b815bb283</field>
-        <field name="Manufacturer">Emea</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Thermistor_PTC-Device-electrospinner-rescue" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C8B1DEA</tstamp>
-    </comp>
-    <comp ref="USB_B_Header1">
-      <value>USB</value>
+    <comp ref="J5">
+      <value>USB_B</value>
       <footprint>Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal</footprint>
       <datasheet> ~</datasheet>
       <fields>
         <field name="Status">resource-center</field>
       </fields>
-      <libsource lib="electrospinner-rescue" part="USB_B-Connector" description=""/>
+      <libsource lib="Connector" part="USB_B" description="USB Type B connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8B2315</tstamp>
     </comp>
-    <comp ref="Barrel_Jack1">
-      <value>BarrelJack</value>
-      <footprint>Connector_BarrelJack:BarrelJack_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/productdetail/sparkfun/prt-00119?qs=WyAARYrbSnbnQpS9xf%252bx5A%3D%3D</datasheet>
-      <fields>
-        <field name="MPN"> PRT-00119 </field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Barrel_Jack_MountingPin-Connector-electrospinner-rescue" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C8B25DD</tstamp>
-    </comp>
-    <comp ref="U5">
-      <value>MSP430G2553IPW20</value>
-      <footprint>Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/msp430g2553.pdf</datasheet>
-      <fields>
-        <field name="MPN">MSP430G2553IPW20</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C884675</tstamp>
-    </comp>
-    <comp ref="U3">
+    <comp ref="U1">
       <value>TPS62147</value>
       <footprint>footprints:TPS62147RGXR</footprint>
       <datasheet>http://www.ti.com/lit/gpn/tps62147</datasheet>
@@ -74,7 +41,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E539A</tstamp>
     </comp>
-    <comp ref="C2">
+    <comp ref="C1">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf</datasheet>
@@ -85,7 +52,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E53A4</tstamp>
     </comp>
-    <comp ref="L2">
+    <comp ref="L1">
       <value>1uH</value>
       <footprint>Inductor_SMD:L_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/281/J(E)TE243A-9101-1324383.pdf</datasheet>
@@ -96,7 +63,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E53B9</tstamp>
     </comp>
-    <comp ref="R4">
+    <comp ref="R2">
       <value>150k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/427/crcwce3-1223726.pdf</datasheet>
@@ -107,12 +74,13 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E53C0</tstamp>
     </comp>
-    <comp ref="C6">
-      <value>2.2uF</value>
+    <comp ref="C11">
+      <value>22uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/40/X7RDielectric-777024.pdf</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/212/KEM_C1006_X5R_SMD-1103249.pdf</datasheet>
       <fields>
-        <field name="MPN">08056C225KAT2A</field>
+        <field name="MPN">C0805C226M8PACTU</field>
+        <field name="Manufacturer">KEMET</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="C_Small-Device-electrospinner-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -162,7 +130,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8F01F9</tstamp>
     </comp>
-    <comp ref="U1">
+    <comp ref="U2">
       <value>FT230XS</value>
       <footprint>Package_SO:SSOP-16_3.9x4.9mm_P0.635mm</footprint>
       <datasheet>http://www.ftdichip.com/Products/ICs/FT230X.html</datasheet>
@@ -173,7 +141,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8F4F67</tstamp>
     </comp>
-    <comp ref="R3">
+    <comp ref="R1">
       <value>560k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf</datasheet>
@@ -184,20 +152,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C8E53C9</tstamp>
     </comp>
-    <comp ref="StepperMotor1">
-      <value>SY42STH47-1206A</value>
-      <datasheet>https://www.pololu.com/product/1200/</datasheet>
-      <fields>
-        <field name="MPN">1200</field>
-        <field name="Manufacturer">Pololu</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Stepper_Motor_unipolar_6pin-Motor" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C8F695F</tstamp>
-    </comp>
-    <comp ref="MotorConnector_Female1">
-      <value>JST_1x6_Female</value>
-      <footprint>Connector_JST:JST_EH_B02B-EH-A_1x06_P2.50mm_Vertical</footprint>
+    <comp ref="J3">
+      <value>MotorConnector</value>
+      <footprint>Connector_JST:JST_XH_B6B-XH-AM_1x06_P2.50mm_Vertical</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="Status">resource-center</field>
@@ -206,58 +163,51 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C96304A</tstamp>
     </comp>
-    <comp ref="MotorConnector_Male1">
-      <value>JST_1x6_Male</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Status">resource-center</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Conn_01x06_Male-Connector" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C963153</tstamp>
-    </comp>
-    <comp ref="Temp_Female1">
-      <value>JST_1x2_Female</value>
-      <footprint>Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Status">resource-center</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Conn_01x02_Female-Connector" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C8E31D3</tstamp>
-    </comp>
-    <comp ref="Temp_Male1">
-      <value>JST_1x2_Male</value>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Status">resource-center</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Conn_01x02_Male-Connector" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C8E32D1</tstamp>
-    </comp>
-    <comp ref="C4">
+    <comp ref="C2">
       <value>3.3uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/400/lcc_automotive_general_en-843974.pdf</datasheet>
       <fields>
         <field name="MPN">CGA4J1X8L1C335K125AC</field>
+        <field name="Manufacturer">TDK</field>
       </fields>
       <libsource lib="electrospinner-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5C94BBCA</tstamp>
     </comp>
-    <comp ref="R7">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf</datasheet>
+    <comp ref="J2">
+      <value>Programmer</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
       <fields>
-        <field name="MPN"> SG73G2ATTD1001D </field>
+        <field name="Status">resource-center</field>
       </fields>
-      <libsource lib="electrospinner-rescue" part="R_Small_US-Device" description=""/>
+      <libsource lib="electrospinner-rescue" part="Conn_02x02_Counter_Clockwise-Connector_Generic" description=""/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CA15E6A</tstamp>
+      <tstamp>5C978C3D</tstamp>
+    </comp>
+    <comp ref="A1">
+      <value>DRV8825</value>
+      <footprint>Module:Pololu_Breakout-16_15.2x20.3mm</footprint>
+      <datasheet>https://www.pololu.com/product/2977</datasheet>
+      <fields>
+        <field name="MPN">2977</field>
+        <field name="Manufacturer">Pololu</field>
+      </fields>
+      <libsource lib="Driver_Motor" part="Pololu_Breakout_DRV8825" description="Pololu Breakout Board, Stepper Driver DRV8825"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAC1863</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>MSP430G2553IPW20</value>
+      <footprint>Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/msp430g2553.pdf</datasheet>
+      <fields>
+        <field name="MPN">MSP430G2553IPW20</field>
+      </fields>
+      <libsource lib="electrospinner-rescue" part="MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C884675</tstamp>
     </comp>
     <comp ref="SW1">
       <value>ResetBTN</value>
@@ -270,54 +220,15 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5CA1B3E2</tstamp>
     </comp>
-    <comp ref="J1">
-      <value>Header_02x02</value>
-      <footprint>Connector_PinHeader_1.00mm:PinHeader_2x02_P1.00mm_Vertical</footprint>
+    <comp ref="TP1">
+      <value>~MotorRST</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
       <datasheet>~</datasheet>
-      <fields>
-        <field name="Status">resource-center</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="Conn_02x02_Counter_Clockwise-Connector_Generic" description=""/>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C978C3D</tstamp>
+      <tstamp>5CBF0D45</tstamp>
     </comp>
-    <comp ref="C10">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/400/lcc_commercial_lowprofile_en-520027.pdf</datasheet>
-      <fields>
-        <field name="MPN">CGB1T3X6S0G104M022BB</field>
-        <field name="Manufacturer">TDK</field>
-      </fields>
-      <libsource lib="electrospinner-rescue" part="C_Small-Device" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CA9D641</tstamp>
-    </comp>
-    <comp ref="R1">
-      <value>158</value>
-      <footprint>Resistor_SMD:R_0603</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf</datasheet>
-      <fields>
-        <field name="MPN">CR0603-FX-1580ELF</field>
-        <field name="Manufacturer">Bourns</field>
-      </fields>
-      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CA89D08</tstamp>
-    </comp>
-    <comp ref="C1">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf</datasheet>
-      <fields>
-        <field name="MPN">AS0805KKX7R9BB104</field>
-        <field name="Manufacturer">Yageo</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5C9F7AD0</tstamp>
-    </comp>
-    <comp ref="C3">
+    <comp ref="C5">
       <value>100uF</value>
       <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/420/United-Chemi-Con-776012.pdf</datasheet>
@@ -329,92 +240,251 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5CB07F1C</tstamp>
     </comp>
-    <comp ref="C5">
+    <comp ref="C3">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/400/lcc_commercial_lowprofile_en-520027.pdf</datasheet>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf</datasheet>
       <fields>
-        <field name="MPN">CGB1T3X6S0G104M022BB</field>
-        <field name="Manufacturer">TDK</field>
+        <field name="MPN">AS0805KKX7R9BB104</field>
+        <field name="Manufacturer">Yageo</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CB3CDCC</tstamp>
+      <tstamp>5C9F7AD0</tstamp>
     </comp>
-    <comp ref="C7">
+    <comp ref="C6">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/400/lcc_commercial_lowprofile_en-520027.pdf</datasheet>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf</datasheet>
       <fields>
-        <field name="MPN">CGB1T3X6S0G104M022BB</field>
-        <field name="Manufacturer">TDK</field>
+        <field name="MPN">AS0805KKX7R9BB104</field>
+        <field name="Manufacturer">Yageo</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CB42BAB</tstamp>
+      <tstamp>5CC736FA</tstamp>
     </comp>
-    <comp ref="C8">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/400/lcc_commercial_lowprofile_en-520027.pdf</datasheet>
-      <fields>
-        <field name="MPN">CGB1T3X6S0G104M022BB</field>
-        <field name="Manufacturer">TDK</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CB48990</tstamp>
-    </comp>
-    <comp ref="C9">
-      <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/400/lcc_commercial_lowprofile_en-520027.pdf</datasheet>
-      <fields>
-        <field name="MPN">CGB1T3X6S0G104M022BB</field>
-        <field name="Manufacturer">TDK</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CB4E779</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>100</value>
+    <comp ref="R4">
+      <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf</datasheet>
       <fields>
-        <field name="MPN">SG73G2ATTD1000D</field>
-        <field name="Manufacturer">KOA Speer</field>
+        <field name="MPN"> SG73G2ATTD1001D </field>
+      </fields>
+      <libsource lib="electrospinner-rescue" part="R_Small_US-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CA15E6A</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>TempSensor</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Status">resource-center</field>
+      </fields>
+      <libsource lib="electrospinner-rescue" part="Conn_01x02_Female-Connector" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C8E31D3</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>158</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf</datasheet>
+      <fields>
+        <field name="MPN">CR0603-FX-1580ELF</field>
+        <field name="Manufacturer">Bourns</field>
       </fields>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CBB0E85</tstamp>
+      <tstamp>5CA89D08</tstamp>
     </comp>
-    <comp ref="A1">
-      <value>Pololu_Breakout_DRV8825</value>
-      <footprint>Module:Pololu_Breakout-16_15.2x20.3mm</footprint>
-      <datasheet>https://www.pololu.com/product/2977</datasheet>
-      <fields>
-        <field name="MPN">2977</field>
-        <field name="Manufacturer">Pololu</field>
-      </fields>
-      <libsource lib="Driver_Motor" part="Pololu_Breakout_DRV8825" description="Pololu Breakout Board, Stepper Driver DRV8825"/>
+    <comp ref="TP2">
+      <value>~MotorEN</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CAC1863</tstamp>
+      <tstamp>5CDD6A81</tstamp>
     </comp>
-    <comp ref="C11">
+    <comp ref="TP6">
+      <value>PCB_TX</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE3A5D8</tstamp>
+    </comp>
+    <comp ref="TP7">
+      <value>PCB_RX</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE4EF4F</tstamp>
+    </comp>
+    <comp ref="TP8">
+      <value>MotorM0</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE547C0</tstamp>
+    </comp>
+    <comp ref="TP9">
+      <value>MotorM1</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE59FC0</tstamp>
+    </comp>
+    <comp ref="TP10">
+      <value>MotorM2</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE5F6AE</tstamp>
+    </comp>
+    <comp ref="TP3">
+      <value>~MotorSLP</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CDD86E6</tstamp>
+    </comp>
+    <comp ref="TP4">
+      <value>MotorDIR</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CDDE8A5</tstamp>
+    </comp>
+    <comp ref="TP5">
+      <value>~MotorFLT</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CDE4962</tstamp>
+    </comp>
+    <comp ref="TP11">
+      <value>MotorSTEP</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CE64C67</tstamp>
+    </comp>
+    <comp ref="C4">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/400/lcc_commercial_lowprofile_en-520027.pdf</datasheet>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf</datasheet>
       <fields>
-        <field name="MPN">CGB1T3X6S0G104M022BB</field>
-        <field name="Manufacturer">TDK</field>
+        <field name="MPN">AS0805KKX7R9BB104</field>
+        <field name="Manufacturer">Yageo</field>
       </fields>
-      <libsource lib="electrospinner-rescue" part="C_Small-Device" description=""/>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5CB79333</tstamp>
+      <tstamp>5CF3A318</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf</datasheet>
+      <fields>
+        <field name="MPN">AS0805KKX7R9BB104</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CF46FAB</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf</datasheet>
+      <fields>
+        <field name="MPN">AS0805KKX7R9BB104</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CF4CD0D</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf</datasheet>
+      <fields>
+        <field name="MPN">AS0805KKX7R9BB104</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CF52A5A</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>12Vin</value>
+      <footprint>Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Barrel_Jack_MountingPin" description="DC Barrel Jack with a mounting pin"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CF6F642</tstamp>
     </comp>
   </components>
   <libparts>
+    <libpart lib="Connector" part="Barrel_Jack_MountingPin">
+      <description>DC Barrel Jack with a mounting pin</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>BarrelJack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack_MountingPin</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="MP" name="MountPin" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_B">
+      <description>USB Type B connector</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="GND" type="power_out"/>
+        <pin num="5" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="CP1_Small">
       <description>Polarized capacitor, small US symbol</description>
       <docs>~</docs>
@@ -490,20 +560,6 @@
         <pin num="16" name="DIR" type="input"/>
       </pins>
     </libpart>
-    <libpart lib="electrospinner-rescue" part="Barrel_Jack_MountingPin-Connector-electrospinner-rescue">
-      <footprints>
-        <fp>BarrelJack*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Barrel_Jack_MountingPin-Connector-electrospinner-rescue</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="MP" name="MountPin" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="electrospinner-rescue" part="C_Small-Device">
       <footprints>
         <fp>C_*</fp>
@@ -543,19 +599,6 @@
         <pin num="2" name="Pin_2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="electrospinner-rescue" part="Conn_01x02_Male-Connector">
-      <footprints>
-        <fp>Connector*:*_1x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x02_Male-Connector</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="electrospinner-rescue" part="Conn_01x06_Female-Connector">
       <footprints>
         <fp>Connector*:*_1x??_*</fp>
@@ -563,23 +606,6 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">Conn_01x06_Female-Connector</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-        <pin num="3" name="Pin_3" type="passive"/>
-        <pin num="4" name="Pin_4" type="passive"/>
-        <pin num="5" name="Pin_5" type="passive"/>
-        <pin num="6" name="Pin_6" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="electrospinner-rescue" part="Conn_01x06_Male-Connector">
-      <footprints>
-        <fp>Connector*:*_1x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x06_Male-Connector</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
@@ -732,24 +758,6 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="electrospinner-rescue" part="Stepper_Motor_unipolar_6pin-Motor">
-      <footprints>
-        <fp>PinHeader*P2.54mm*</fp>
-        <fp>TerminalBlock*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">M</field>
-        <field name="Value">Stepper_Motor_unipolar_6pin-Motor</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="3" name="-" type="passive"/>
-        <pin num="4" name="~" type="passive"/>
-        <pin num="5" name="~" type="passive"/>
-        <pin num="6" name="~" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="electrospinner-rescue" part="TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue">
       <fields>
         <field name="Reference">U</field>
@@ -769,41 +777,11 @@
         <pin num="11" name="FSEL" type="input"/>
       </pins>
     </libpart>
-    <libpart lib="electrospinner-rescue" part="Thermistor_PTC-Device-electrospinner-rescue">
-      <footprints>
-        <fp>*PTC*</fp>
-        <fp>*Thermistor*</fp>
-        <fp>PIN?ARRAY*</fp>
-        <fp>bornier*</fp>
-        <fp>*Terminal?Block*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">TH</field>
-        <field name="Value">Thermistor_PTC-Device-electrospinner-rescue</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="electrospinner-rescue" part="USB_B-Connector">
-      <footprints>
-        <fp>USB*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">USB_B-Connector</field>
-      </fields>
-      <pins>
-        <pin num="1" name="VBUS" type="power_out"/>
-        <pin num="2" name="D-" type="passive"/>
-        <pin num="3" name="D+" type="passive"/>
-        <pin num="4" name="GND" type="power_out"/>
-        <pin num="5" name="Shield" type="passive"/>
-      </pins>
-    </libpart>
   </libparts>
   <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
     <library logical="Device">
       <uri>/usr/share/kicad/library/Device.lib</uri>
     </library>
@@ -815,260 +793,223 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/MotorMS1">
-      <node ref="U5" pin="10"/>
-      <node ref="A1" pin="10"/>
-    </net>
-    <net code="2" name="/MotorDIR">
-      <node ref="U5" pin="13"/>
-      <node ref="A1" pin="16"/>
-    </net>
-    <net code="3" name="/MotorSLEEP">
-      <node ref="A1" pin="15"/>
-    </net>
-    <net code="4" name="/~MotorRST">
-      <node ref="A1" pin="13"/>
-    </net>
-    <net code="5" name="/~MotorSLEEP">
-      <node ref="U5" pin="8"/>
-      <node ref="A1" pin="14"/>
-    </net>
-    <net code="6" name="/~MotorENABLE">
-      <node ref="U5" pin="14"/>
-      <node ref="A1" pin="9"/>
-    </net>
-    <net code="7" name="/2B">
-      <node ref="MotorConnector_Female1" pin="6"/>
-      <node ref="A1" pin="6"/>
-    </net>
-    <net code="8" name="/2A">
-      <node ref="A1" pin="5"/>
-      <node ref="MotorConnector_Female1" pin="3"/>
-    </net>
-    <net code="9" name="+3V3">
-      <node ref="R5" pin="1"/>
-      <node ref="R6" pin="1"/>
-      <node ref="C7" pin="1"/>
-      <node ref="R3" pin="1"/>
-      <node ref="U1" pin="3"/>
-      <node ref="U1" pin="12"/>
-      <node ref="Temp_Female1" pin="1"/>
-      <node ref="L2" pin="2"/>
-      <node ref="U5" pin="1"/>
-      <node ref="C6" pin="1"/>
-      <node ref="C5" pin="1"/>
-      <node ref="C8" pin="1"/>
-      <node ref="C9" pin="1"/>
-      <node ref="C10" pin="1"/>
-      <node ref="SW1" pin="2"/>
-    </net>
-    <net code="10" name="/~RST">
-      <node ref="J1" pin="4"/>
-      <node ref="U1" pin="11"/>
-      <node ref="R2" pin="1"/>
-      <node ref="R7" pin="1"/>
-      <node ref="SW1" pin="1"/>
-      <node ref="U5" pin="16"/>
-    </net>
-    <net code="11" name="/TEST">
-      <node ref="U5" pin="17"/>
-      <node ref="J1" pin="3"/>
-    </net>
-    <net code="12" name="/DVSS">
+    <net code="1" name="GNDD">
+      <node ref="R7" pin="2"/>
       <node ref="J1" pin="2"/>
-    </net>
-    <net code="13" name="/DVCC">
-      <node ref="J1" pin="1"/>
-    </net>
-    <net code="14" name="Net-(U5-Pad6)">
-      <node ref="U5" pin="6"/>
-    </net>
-    <net code="15" name="/MotorMS#">
-      <node ref="A1" pin="12"/>
-    </net>
-    <net code="16" name="/MotorMS2">
-      <node ref="U5" pin="11"/>
-      <node ref="A1" pin="11"/>
-    </net>
-    <net code="17" name="Net-(C4-Pad1)">
-      <node ref="U3" pin="9"/>
-      <node ref="C4" pin="1"/>
-    </net>
-    <net code="18" name="/Vo,temp">
-      <node ref="U5" pin="2"/>
-      <node ref="R1" pin="1"/>
-      <node ref="Temp_Female1" pin="2"/>
-    </net>
-    <net code="19" name="Net-(Pt1-Pad1)">
-      <node ref="Temp_Male1" pin="1"/>
-      <node ref="Pt1" pin="1"/>
-    </net>
-    <net code="20" name="/PCB_RX">
-      <node ref="U1" pin="4"/>
-      <node ref="U5" pin="4"/>
-    </net>
-    <net code="21" name="/MotorSTEP">
-      <node ref="U5" pin="9"/>
-    </net>
-    <net code="22" name="/MotorMS3">
-      <node ref="U5" pin="12"/>
-    </net>
-    <net code="23" name="/~MotorRESET">
-      <node ref="U5" pin="15"/>
-    </net>
-    <net code="24" name="Net-(U5-Pad5)">
-      <node ref="U5" pin="5"/>
-    </net>
-    <net code="25" name="/~MotorFLT">
-      <node ref="U5" pin="19"/>
-      <node ref="A1" pin="2"/>
-    </net>
-    <net code="26" name="Net-(U5-Pad18)">
-      <node ref="U5" pin="18"/>
-    </net>
-    <net code="27" name="Net-(U5-Pad7)">
-      <node ref="U5" pin="7"/>
-    </net>
-    <net code="28" name="+12V">
-      <node ref="U3" pin="8"/>
-      <node ref="U3" pin="1"/>
-      <node ref="A1" pin="8"/>
-      <node ref="C11" pin="1"/>
-      <node ref="C2" pin="1"/>
-      <node ref="Barrel_Jack1" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="C1" pin="1"/>
-    </net>
-    <net code="29" name="GNDD">
-      <node ref="Barrel_Jack1" pin="2"/>
-      <node ref="U3" pin="11"/>
-      <node ref="C2" pin="2"/>
-      <node ref="U3" pin="3"/>
-      <node ref="U3" pin="4"/>
-      <node ref="USB_B_Header1" pin="5"/>
-      <node ref="USB_B_Header1" pin="4"/>
-      <node ref="U5" pin="20"/>
-      <node ref="U3" pin="7"/>
       <node ref="R4" pin="2"/>
-      <node ref="U3" pin="10"/>
-      <node ref="Barrel_Jack1" pin="MP"/>
-      <node ref="C9" pin="2"/>
-      <node ref="C4" pin="2"/>
       <node ref="C8" pin="2"/>
       <node ref="C7" pin="2"/>
-      <node ref="R7" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="U2" pin="13"/>
+      <node ref="C9" pin="2"/>
+      <node ref="J1" pin="MP"/>
+      <node ref="A1" pin="7"/>
+      <node ref="A1" pin="1"/>
+      <node ref="U2" pin="5"/>
+      <node ref="J2" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="J5" pin="5"/>
+      <node ref="U1" pin="7"/>
+      <node ref="R2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="10"/>
+      <node ref="J5" pin="4"/>
+      <node ref="U3" pin="20"/>
       <node ref="C5" pin="2"/>
       <node ref="C3" pin="2"/>
-      <node ref="C1" pin="2"/>
-      <node ref="R1" pin="2"/>
-      <node ref="A1" pin="7"/>
-      <node ref="C11" pin="2"/>
-      <node ref="A1" pin="1"/>
-      <node ref="U1" pin="5"/>
       <node ref="C6" pin="2"/>
-      <node ref="U1" pin="13"/>
     </net>
-    <net code="30" name="/1B">
-      <node ref="MotorConnector_Female1" pin="4"/>
-      <node ref="A1" pin="4"/>
+    <net code="2" name="+12V">
+      <node ref="U1" pin="1"/>
+      <node ref="J1" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="A1" pin="8"/>
+      <node ref="C4" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="U1" pin="11"/>
     </net>
-    <net code="31" name="/1A">
-      <node ref="MotorConnector_Female1" pin="1"/>
-      <node ref="A1" pin="3"/>
+    <net code="3" name="Net-(U3-Pad19)">
+      <node ref="U3" pin="19"/>
     </net>
-    <net code="32" name="Net-(C10-Pad2)">
-      <node ref="C10" pin="2"/>
-      <node ref="R2" pin="2"/>
+    <net code="4" name="Net-(U3-Pad18)">
+      <node ref="U3" pin="18"/>
     </net>
-    <net code="33" name="Net-(R3-Pad2)">
-      <node ref="U3" pin="5"/>
-      <node ref="R3" pin="2"/>
+    <net code="5" name="Net-(U3-Pad15)">
+      <node ref="U3" pin="15"/>
+    </net>
+    <net code="6" name="Net-(U3-Pad13)">
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="7" name="/~RST">
       <node ref="R4" pin="1"/>
+      <node ref="J2" pin="4"/>
+      <node ref="U2" pin="11"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="U3" pin="16"/>
     </net>
-    <net code="34" name="Net-(L2-Pad1)">
+    <net code="8" name="+3V3">
+      <node ref="L1" pin="2"/>
+      <node ref="U3" pin="1"/>
+      <node ref="C11" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U2" pin="12"/>
+      <node ref="R1" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="C9" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="J2" pin="1"/>
+      <node ref="U2" pin="3"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="9" name="/~MotorEN">
+      <node ref="U3" pin="9"/>
+      <node ref="TP2" pin="1"/>
+      <node ref="A1" pin="9"/>
+    </net>
+    <net code="10" name="/MotorM2">
+      <node ref="TP10" pin="1"/>
+      <node ref="A1" pin="12"/>
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="11" name="/MotorM1">
       <node ref="U3" pin="6"/>
-      <node ref="L2" pin="1"/>
+      <node ref="TP9" pin="1"/>
+      <node ref="A1" pin="11"/>
+    </net>
+    <net code="12" name="/MotorM0">
+      <node ref="TP8" pin="1"/>
+      <node ref="A1" pin="10"/>
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="13" name="/~MotorFLT">
+      <node ref="TP5" pin="1"/>
+      <node ref="U3" pin="12"/>
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="14" name="/~MotorSLP">
+      <node ref="TP3" pin="1"/>
+      <node ref="A1" pin="14"/>
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="15" name="Net-(L1-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="L1" pin="1"/>
+    </net>
+    <net code="16" name="/MotorSTEP">
+      <node ref="A1" pin="15"/>
+      <node ref="U3" pin="14"/>
+      <node ref="TP11" pin="1"/>
+    </net>
+    <net code="17" name="/Vo,temp">
+      <node ref="J4" pin="2"/>
+      <node ref="R7" pin="1"/>
       <node ref="U3" pin="2"/>
     </net>
-    <net code="35" name="/PCB_TX">
-      <node ref="U1" pin="1"/>
-      <node ref="U5" pin="3"/>
+    <net code="18" name="/MotorDIR">
+      <node ref="U3" pin="11"/>
+      <node ref="A1" pin="16"/>
+      <node ref="TP4" pin="1"/>
     </net>
-    <net code="36" name="Net-(U1-Pad10)">
-      <node ref="U1" pin="10"/>
+    <net code="19" name="/~MotorRST">
+      <node ref="U3" pin="8"/>
+      <node ref="TP1" pin="1"/>
+      <node ref="A1" pin="13"/>
     </net>
-    <net code="37" name="/D+">
-      <node ref="USB_B_Header1" pin="3"/>
-      <node ref="U1" pin="8"/>
+    <net code="20" name="/PCB_RX">
+      <node ref="U2" pin="4"/>
+      <node ref="TP7" pin="1"/>
+      <node ref="U3" pin="4"/>
     </net>
-    <net code="38" name="/D-">
-      <node ref="USB_B_Header1" pin="2"/>
-      <node ref="U1" pin="9"/>
+    <net code="21" name="Net-(U2-Pad15)">
+      <node ref="U2" pin="15"/>
     </net>
-    <net code="39" name="Net-(USB_B_Header1-Pad1)">
-      <node ref="USB_B_Header1" pin="1"/>
+    <net code="22" name="Net-(U2-Pad2)">
+      <node ref="U2" pin="2"/>
     </net>
-    <net code="40" name="Net-(Pt1-Pad2)">
-      <node ref="Pt1" pin="2"/>
-      <node ref="Temp_Male1" pin="2"/>
+    <net code="23" name="Net-(U2-Pad6)">
+      <node ref="U2" pin="6"/>
     </net>
-    <net code="41" name="/BLU">
-      <node ref="MotorConnector_Male1" pin="3"/>
-      <node ref="StepperMotor1" pin="3"/>
+    <net code="24" name="Net-(U2-Pad16)">
+      <node ref="U2" pin="16"/>
     </net>
-    <net code="42" name="/RED">
-      <node ref="MotorConnector_Male1" pin="1"/>
-      <node ref="StepperMotor1" pin="1"/>
+    <net code="25" name="/~TXLED">
+      <node ref="D2" pin="1"/>
+      <node ref="U2" pin="7"/>
     </net>
-    <net code="43" name="/WHT">
-      <node ref="MotorConnector_Male1" pin="2"/>
-      <node ref="StepperMotor1" pin="2"/>
+    <net code="26" name="/PCB_TX">
+      <node ref="TP6" pin="1"/>
+      <node ref="U2" pin="1"/>
+      <node ref="U3" pin="3"/>
     </net>
-    <net code="44" name="/GRN">
-      <node ref="MotorConnector_Male1" pin="6"/>
-      <node ref="StepperMotor1" pin="6"/>
+    <net code="27" name="Net-(U2-Pad10)">
+      <node ref="U2" pin="10"/>
     </net>
-    <net code="45" name="/YEL">
-      <node ref="MotorConnector_Male1" pin="5"/>
-      <node ref="StepperMotor1" pin="5"/>
+    <net code="28" name="/D+">
+      <node ref="J5" pin="3"/>
+      <node ref="U2" pin="8"/>
     </net>
-    <net code="46" name="/BLK">
-      <node ref="MotorConnector_Male1" pin="4"/>
-      <node ref="StepperMotor1" pin="4"/>
+    <net code="29" name="/D-">
+      <node ref="U2" pin="9"/>
+      <node ref="J5" pin="2"/>
     </net>
-    <net code="47" name="Net-(MotorConnector_Female1-Pad5)">
-      <node ref="MotorConnector_Female1" pin="5"/>
+    <net code="30" name="/~RXLED">
+      <node ref="U2" pin="14"/>
+      <node ref="D1" pin="1"/>
     </net>
-    <net code="48" name="Net-(MotorConnector_Female1-Pad2)">
-      <node ref="MotorConnector_Female1" pin="2"/>
-    </net>
-    <net code="49" name="Net-(D2-Pad2)">
+    <net code="31" name="Net-(D2-Pad2)">
       <node ref="R6" pin="2"/>
       <node ref="D2" pin="2"/>
     </net>
-    <net code="50" name="Net-(D1-Pad2)">
-      <node ref="R5" pin="2"/>
+    <net code="32" name="Net-(D1-Pad2)">
       <node ref="D1" pin="2"/>
+      <node ref="R5" pin="2"/>
     </net>
-    <net code="51" name="/~RXLED">
-      <node ref="D1" pin="1"/>
-      <node ref="U1" pin="14"/>
+    <net code="33" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="U1" pin="5"/>
+      <node ref="R2" pin="1"/>
     </net>
-    <net code="52" name="Net-(U1-Pad15)">
-      <node ref="U1" pin="15"/>
+    <net code="34" name="Net-(C2-Pad1)">
+      <node ref="U1" pin="9"/>
+      <node ref="C2" pin="1"/>
     </net>
-    <net code="53" name="Net-(U1-Pad2)">
-      <node ref="U1" pin="2"/>
+    <net code="35" name="Net-(J5-Pad1)">
+      <node ref="J5" pin="1"/>
     </net>
-    <net code="54" name="Net-(U1-Pad6)">
-      <node ref="U1" pin="6"/>
+    <net code="36" name="/B2">
+      <node ref="A1" pin="6"/>
+      <node ref="J3" pin="6"/>
     </net>
-    <net code="55" name="Net-(U1-Pad16)">
-      <node ref="U1" pin="16"/>
+    <net code="37" name="/B1">
+      <node ref="A1" pin="5"/>
+      <node ref="J3" pin="4"/>
     </net>
-    <net code="56" name="/~TXLED">
-      <node ref="D2" pin="1"/>
-      <node ref="U1" pin="7"/>
+    <net code="38" name="/A2">
+      <node ref="A1" pin="3"/>
+      <node ref="J3" pin="3"/>
+    </net>
+    <net code="39" name="/TEST">
+      <node ref="U3" pin="17"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="40" name="Net-(J3-Pad2)">
+      <node ref="J3" pin="2"/>
+    </net>
+    <net code="41" name="Net-(J3-Pad5)">
+      <node ref="J3" pin="5"/>
+    </net>
+    <net code="42" name="/A1">
+      <node ref="A1" pin="4"/>
+      <node ref="J3" pin="1"/>
     </net>
   </nets>
 </export>

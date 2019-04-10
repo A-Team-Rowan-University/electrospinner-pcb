@@ -1,4 +1,4 @@
 (sym_lib_table
+  (lib (name Regulator_Switching)(type Legacy)(uri ${KIPRJMOD}/Regulator_Switching.lib)(options "")(descr ""))
   (lib (name electrospinner-rescue)(type Legacy)(uri ${KIPRJMOD}/electrospinner-rescue.lib)(options "")(descr ""))
-  (lib (name pololu_a4988)(type Legacy)(uri ${KIPRJMOD}/pololu_a4988.lib)(options "")(descr ""))
 )

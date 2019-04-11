@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/electrospinner.sch)
-    (date "Thu 11 Apr 2019 12:44:12 PM EDT")
+    (date "Thu 11 Apr 2019 01:12:45 PM EDT")
     (tool "Eeschema 5.1.0")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -45,10 +45,11 @@
       (tstamp 5C8E53A4))
     (comp (ref L1)
       (value 2.2uH)
-      (footprint Inductor_SMD:L_0805_2012Metric)
-      (datasheet "https://www.mouser.com/datasheet/2/281/J(E)TE243A-9101-1324383.pdf")
+      (footprint electrospinner:L_Coilcraft_XEL6030)
+      (datasheet https://www.mouser.com/datasheet/2/597/xel6030-1359473.pdf)
       (fields
-        (field (name MPN) DFE201612PD-1R0M=P2))
+        (field (name MPN) XEL6030-222MEC)
+        (field (name Manufacturer) Coilcraft))
       (libsource (lib electrospinner-rescue) (part L_Small-Device-electrospinner-rescue) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5C8E53B9))

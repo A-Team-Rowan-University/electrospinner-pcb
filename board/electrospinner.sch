@@ -23,6 +23,8 @@ F 1 "USB_B" H 1100 5000 50  0000 C CNN
 F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 1250 4600 50  0001 C CNN
 F 3 " ~" H 1250 4600 50  0001 C CNN
 F 4 "resource-center" H -350 -2150 50  0001 C CNN "Status"
+F 5 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
 	1    1100 4650
 	1    0    0    -1  
 $EndComp
@@ -35,6 +37,7 @@ F 1 "TPS62147" H 1650 1776 50  0000 C CNN
 F 2 "footprints:TPS62147RGXR" H 1650 1900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/tps62147" H 1650 1900 50  0001 C CNN
 F 4 "TPS62147RGXR" H -700 50  50  0001 C CNN "MPN"
+F 5 "Texas Instruments" H 0   0   50  0001 C CNN "Manufacturer"
 	1    1650 1900
 	1    0    0    -1  
 $EndComp
@@ -59,9 +62,10 @@ U 1 1 5C8E53B9
 P 2250 2200
 F 0 "L1" V 2435 2200 50  0000 C CNN
 F 1 "2.2uH" V 2344 2200 50  0000 C CNN
-F 2 "Inductor_SMD:L_0805_2012Metric" H 2250 2200 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/281/J(E)TE243A-9101-1324383.pdf" H 2250 2200 50  0001 C CNN
-F 4 "DFE201612PD-1R0M=P2" H -800 50  50  0001 C CNN "MPN"
+F 2 "electrospinner:L_Coilcraft_XEL6030" H 2250 2200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/597/xel6030-1359473.pdf" H 2250 2200 50  0001 C CNN
+F 4 "XEL6030-222MEC" H -800 50  50  0001 C CNN "MPN"
+F 5 "Coilcraft" H 0   0   50  0001 C CNN "Manufacturer"
 	1    2250 2200
 	0    -1   -1   0   
 $EndComp
@@ -205,6 +209,8 @@ F 1 "RXLED" H 4100 5094 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 4100 4950 50  0001 C CNN
 F 3 "~" V 4100 4950 50  0001 C CNN
 F 4 "resource-center" H 950 -400 50  0001 C CNN "Status"
+F 5 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4100 4950
 	1    0    0    -1  
 $EndComp
@@ -217,6 +223,8 @@ F 1 "TXLED" H 4100 4950 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 4100 5050 50  0001 C CNN
 F 3 "~" V 4100 5050 50  0001 C CNN
 F 4 "resource-center" H 950 -400 50  0001 C CNN "Status"
+F 5 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4100 5050
 	1    0    0    -1  
 $EndComp
@@ -316,6 +324,8 @@ F 1 "MotorConnector" H 9050 4950 50  0000 L CNN
 F 2 "Connector_JST:JST_XH_B6B-XH-AM_1x06_P2.50mm_Vertical" H 9400 4550 50  0001 C CNN
 F 3 "~" H 9400 4550 50  0001 C CNN
 F 4 "resource-center" H 2200 -850 50  0001 C CNN "Status"
+F 5 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
 	1    9400 4550
 	1    0    0    -1  
 $EndComp
@@ -379,6 +389,8 @@ F 1 "Programmer" H 5850 1476 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 5800 1350 50  0001 C CNN
 F 3 "~" H 5800 1350 50  0001 C CNN
 F 4 "resource-center" H -4200 -1050 50  0001 C CNN "Status"
+F 5 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
 	1    5800 1350
 	1    0    0    -1  
 $EndComp
@@ -552,6 +564,7 @@ F 1 "MSP430G2553IPW20" H 7250 3200 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5250 1900 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/msp430g2553.pdf" H 6650 2450 50  0001 C CNN
 F 4 "MSP430G2553IPW20" H 0   0   50  0001 C CNN "MPN"
+F 5 "Texas Instruments" H 0   0   50  0001 C CNN "Manufacturer"
 	1    6700 2450
 	1    0    0    -1  
 $EndComp
@@ -610,6 +623,8 @@ F 1 "ResetBTN" V 3250 1850 50  0000 R CNN
 F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 3250 1550 50  0001 C CNN
 F 3 "~" H 3250 1550 50  0001 C CNN
 F 4 "resource-center" H -1200 -400 50  0001 C CNN "Status"
+F 5 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
 	1    3250 1350
 	0    1    -1   0   
 $EndComp
@@ -620,7 +635,9 @@ P 4550 2150
 F 0 "TP1" V 4550 2400 50  0000 C CNN
 F 1 "~MotorRST" V 4550 2700 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 4750 2150 50  0001 C CNN
-F 3 "~" H 4750 2150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 4750 2150 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4550 2150
 	0    -1   -1   0   
 $EndComp
@@ -787,6 +804,8 @@ F 1 "TempSensorConnector" H 10350 2100 50  0000 L CNN
 F 2 "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical" H 10700 1950 50  0001 C CNN
 F 3 "~" H 10700 1950 50  0001 C CNN
 F 4 "resource-center" H 1350 950 50  0001 C CNN "Status"
+F 5 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
 	1    10700 1950
 	1    0    0    -1  
 $EndComp
@@ -920,7 +939,9 @@ P 4550 2250
 F 0 "TP2" V 4550 2500 50  0000 C CNN
 F 1 "~MotorEN" V 4550 2800 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 4750 2250 50  0001 C CNN
-F 3 "~" H 4750 2250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 4750 2250 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4550 2250
 	0    -1   -1   0   
 $EndComp
@@ -941,7 +962,9 @@ P 8900 2150
 F 0 "TP6" V 8900 2400 50  0000 C CNN
 F 1 "PCB_TX" V 8900 2550 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 9100 2150 50  0001 C CNN
-F 3 "~" H 9100 2150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 9100 2150 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8900 2150
 	0    1    1    0   
 $EndComp
@@ -952,7 +975,9 @@ P 8900 2250
 F 0 "TP7" V 8900 2500 50  0000 C CNN
 F 1 "PCB_RX" V 8900 2650 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 9100 2250 50  0001 C CNN
-F 3 "~" H 9100 2250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 9100 2250 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8900 2250
 	0    1    1    0   
 $EndComp
@@ -963,7 +988,9 @@ P 8900 2350
 F 0 "TP8" V 8900 2600 50  0000 C CNN
 F 1 "MotorM0" V 8900 2750 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 9100 2350 50  0001 C CNN
-F 3 "~" H 9100 2350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 9100 2350 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8900 2350
 	0    1    1    0   
 $EndComp
@@ -974,7 +1001,9 @@ P 8900 2450
 F 0 "TP9" V 8900 2700 50  0000 C CNN
 F 1 "MotorM1" V 8900 2850 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 9100 2450 50  0001 C CNN
-F 3 "~" H 9100 2450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 9100 2450 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8900 2450
 	0    1    1    0   
 $EndComp
@@ -985,7 +1014,9 @@ P 8900 2550
 F 0 "TP10" V 8900 2800 50  0000 C CNN
 F 1 "MotorM2" V 8900 2950 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 9100 2550 50  0001 C CNN
-F 3 "~" H 9100 2550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 9100 2550 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8900 2550
 	0    1    1    0   
 $EndComp
@@ -1010,7 +1041,9 @@ P 4550 2350
 F 0 "TP3" V 4550 2600 50  0000 C CNN
 F 1 "~MotorSLP" V 4550 2900 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 4750 2350 50  0001 C CNN
-F 3 "~" H 4750 2350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 4750 2350 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4550 2350
 	0    -1   -1   0   
 $EndComp
@@ -1021,7 +1054,9 @@ P 4550 2450
 F 0 "TP4" V 4550 2700 50  0000 C CNN
 F 1 "MotorDIR" V 4550 3000 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 4750 2450 50  0001 C CNN
-F 3 "~" H 4750 2450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 4750 2450 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4550 2450
 	0    -1   -1   0   
 $EndComp
@@ -1032,7 +1067,9 @@ P 4550 2550
 F 0 "TP5" V 4550 2800 50  0000 C CNN
 F 1 "~MotorFLT" V 4550 3100 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 4750 2550 50  0001 C CNN
-F 3 "~" H 4750 2550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 4750 2550 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4550 2550
 	0    -1   -1   0   
 $EndComp
@@ -1043,7 +1080,9 @@ P 8900 2650
 F 0 "TP11" V 8900 2900 50  0000 C CNN
 F 1 "MotorSTEP" V 8900 3050 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 9100 2650 50  0001 C CNN
-F 3 "~" H 9100 2650 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/215/015-744075.pdf" H 9100 2650 50  0001 C CNN
+F 4 "5015 " H 0   0   50  0001 C CNN "MPN"
+F 5 "Keystone Electronics" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8900 2650
 	0    1    1    0   
 $EndComp
@@ -1157,6 +1196,9 @@ F 0 "J1" H 957 1367 50  0000 C CNN
 F 1 "12Vin" H 957 1276 50  0000 C CNN
 F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 950 1010 50  0001 C CNN
 F 3 "~" H 950 1010 50  0001 C CNN
+F 4 "resource-center" H 0   0   50  0001 C CNN "MPN"
+F 5 "resource-center" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "resource-center" H 0   0   50  0001 C CNN "Status"
 	1    900  1050
 	1    0    0    -1  
 $EndComp

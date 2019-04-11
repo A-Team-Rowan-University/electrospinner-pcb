@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Electrospinner PCB"
-Date "2019-04-09"
-Rev "5"
+Date "2019-04-11"
+Rev "6"
 Comp "PEDC"
 Comment1 ""
 Comment2 ""
@@ -47,6 +47,7 @@ F 1 "10uF" H 650 2500 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 900 2550 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 900 2550 50  0001 C CNN
 F 4 "C0805X106K8RACAUTO" H -700 -150 50  0001 C CNN "MPN"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
 	1    900  2550
 	1    0    0    -1  
 $EndComp
@@ -57,7 +58,7 @@ L electrospinner-rescue:L_Small-Device-electrospinner-rescue L1
 U 1 1 5C8E53B9
 P 2250 2200
 F 0 "L1" V 2435 2200 50  0000 C CNN
-F 1 "1uH" V 2344 2200 50  0000 C CNN
+F 1 "2.2uH" V 2344 2200 50  0000 C CNN
 F 2 "Inductor_SMD:L_0805_2012Metric" H 2250 2200 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/281/J(E)TE243A-9101-1324383.pdf" H 2250 2200 50  0001 C CNN
 F 4 "DFE201612PD-1R0M=P2" H -800 50  50  0001 C CNN "MPN"
@@ -86,8 +87,8 @@ $Comp
 L electrospinner-rescue:C_Small-Device-electrospinner-rescue C11
 U 1 1 5C8E53D8
 P 2900 2550
-F 0 "C11" H 2992 2596 50  0000 L CNN
-F 1 "22uF" H 2992 2505 50  0000 L CNN
+F 0 "C11" V 2850 2350 50  0000 L CNN
+F 1 "22uF" V 2850 2600 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 2900 2550 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1006_X5R_SMD-1103249.pdf" H 2900 2550 50  0001 C CNN
 F 4 "C0805C226M8PACTU" H -700 50  50  0001 C CNN "MPN"
@@ -117,19 +118,16 @@ Wire Wire Line
 $Comp
 L electrospinner-rescue:+3V3-power #PWR023
 U 1 1 5C8E5402
-P 3000 2150
-F 0 "#PWR023" H 3000 2000 50  0001 C CNN
-F 1 "+3V3" H 3015 2323 50  0000 C CNN
-F 2 "" H 3000 2150 50  0001 C CNN
-F 3 "" H 3000 2150 50  0001 C CNN
-	1    3000 2150
+P 3250 2150
+F 0 "#PWR023" H 3250 2000 50  0001 C CNN
+F 1 "+3V3" H 3265 2323 50  0000 C CNN
+F 2 "" H 3250 2150 50  0001 C CNN
+F 3 "" H 3250 2150 50  0001 C CNN
+	1    3250 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3000 2150 3000 2200
-Wire Wire Line
-	3000 2200 2900 2200
-Connection ~ 2900 2200
+	3250 2150 3250 2200
 Connection ~ 2550 2200
 Wire Wire Line
 	2550 2200 2500 2200
@@ -570,7 +568,7 @@ NoConn ~ 5000 2650
 NoConn ~ 5000 2750
 Wire Wire Line
 	4600 2000 5000 2000
-Text Label 3800 1250 2    50   ~ 10
+Text Label 3800 1050 2    50   ~ 10
 ~RST
 $Comp
 L electrospinner-rescue:GNDD-power #PWR0103
@@ -586,9 +584,9 @@ $EndComp
 Wire Wire Line
 	3250 1550 3250 1600
 Wire Wire Line
-	3250 1250 3250 1350
+	3250 1050 3250 1150
 Wire Wire Line
-	3250 1250 3800 1250
+	3250 1050 3800 1050
 $Comp
 L electrospinner-rescue:+3V3-power #PWR025
 U 1 1 5CA2603E
@@ -601,18 +599,18 @@ F 3 "" H 3250 700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 1200 3250 1250
-Connection ~ 3250 1250
+	3250 1000 3250 1050
+Connection ~ 3250 1050
 $Comp
 L electrospinner-rescue:SW_Push-Switch SW1
 U 1 1 5CA1B3E2
-P 3250 1000
-F 0 "SW1" V 3350 1300 50  0000 R CNN
-F 1 "ResetBTN" V 3250 1500 50  0000 R CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 3250 1200 50  0001 C CNN
-F 3 "~" H 3250 1200 50  0001 C CNN
-F 4 "resource-center" H -1200 -750 50  0001 C CNN "Status"
-	1    3250 1000
+P 3250 1350
+F 0 "SW1" V 3350 1650 50  0000 R CNN
+F 1 "ResetBTN" V 3250 1850 50  0000 R CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 3250 1550 50  0001 C CNN
+F 3 "~" H 3250 1550 50  0001 C CNN
+F 4 "resource-center" H -1200 -400 50  0001 C CNN "Status"
+	1    3250 1350
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -768,26 +766,16 @@ Wire Wire Line
 	2300 1300 2450 1300
 Wire Wire Line
 	2300 1200 2300 1300
-Wire Wire Line
-	2600 1000 2600 750 
-Wire Wire Line
-	2600 750  2450 750 
-Connection ~ 2450 750 
-Wire Wire Line
-	2600 1200 2600 1300
-Wire Wire Line
-	2600 1300 2450 1300
-Connection ~ 2450 1300
 $Comp
 L electrospinner-rescue:R_Small_US-Device R4
 U 1 1 5CA15E6A
-P 3250 1450
-F 0 "R4" H 3300 1500 50  0000 L CNN
-F 1 "10k" H 3300 1400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 3250 1450 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf" H 3250 1450 50  0001 C CNN
-F 4 " SG73G2ATTD1001D " H -1200 -650 50  0001 C CNN "MPN"
-	1    3250 1450
+P 3250 900
+F 0 "R4" H 3300 950 50  0000 L CNN
+F 1 "10k" H 3300 850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3250 900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/219/SG73G-1316861.pdf" H 3250 900 50  0001 C CNN
+F 4 " SG73G2ATTD1001D " H -1200 -1200 50  0001 C CNN "MPN"
+	1    3250 900 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1129,32 +1117,6 @@ F 5 "Yageo" H 400 50  50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C8
-U 1 1 5CF4CD0D
-P 2450 1100
-F 0 "C8" V 2400 950 50  0000 L CNN
-F 1 "0.1uF" V 2400 1150 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2450 1100 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf" H 2450 1100 50  0001 C CNN
-F 4 "AS0805KKX7R9BB104" H 550 50  50  0001 C CNN "MPN"
-F 5 "Yageo" H 550 50  50  0001 C CNN "Manufacturer"
-	1    2450 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C9
-U 1 1 5CF52A5A
-P 2600 1100
-F 0 "C9" V 2550 950 50  0000 L CNN
-F 1 "0.1uF" V 2550 1150 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2600 1100 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf" H 2600 1100 50  0001 C CNN
-F 4 "AS0805KKX7R9BB104" H 700 50  50  0001 C CNN "MPN"
-F 5 "Yageo" H 700 50  50  0001 C CNN "Manufacturer"
-	1    2600 1100
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDD #PWR0119
 U 1 1 5CF5F358
 P 1200 3100
@@ -1212,16 +1174,7 @@ Wire Wire Line
 	900  2200 900  2300
 Wire Wire Line
 	900  2300 1250 2300
-Wire Wire Line
-	1050 2500 1050 2400
-Wire Wire Line
-	1050 2400 900  2400
-Wire Wire Line
-	900  2400 900  2300
 Connection ~ 900  2300
-Wire Wire Line
-	900  2450 900  2400
-Connection ~ 900  2400
 Wire Wire Line
 	2350 2200 2500 2200
 Wire Wire Line
@@ -1236,4 +1189,100 @@ Text Notes 7050 5350 0    50   ~ 0
 Stepper Motor Driver
 Text Notes 9900 2700 0    50   ~ 0
 Temperature Sensing Circuit
+Wire Wire Line
+	900  2300 900  2450
+Wire Wire Line
+	1050 2500 1050 2700
+Connection ~ 1050 2700
+Connection ~ 2450 1300
+Connection ~ 2450 750 
+$Comp
+L Device:C_Small C8
+U 1 1 5CF4CD0D
+P 2450 1100
+F 0 "C8" V 2400 950 50  0000 L CNN
+F 1 "0.1uF" V 2400 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2450 1100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf" H 2450 1100 50  0001 C CNN
+F 4 "AS0805KKX7R9BB104" H 550 50  50  0001 C CNN "MPN"
+F 5 "Yageo" H 550 50  50  0001 C CNN "Manufacturer"
+	1    2450 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1300 2450 1300
+Wire Wire Line
+	2600 1200 2600 1300
+Wire Wire Line
+	2600 750  2450 750 
+Wire Wire Line
+	2600 1000 2600 750 
+$Comp
+L Device:C_Small C9
+U 1 1 5CF52A5A
+P 2600 1100
+F 0 "C9" V 2550 950 50  0000 L CNN
+F 1 "0.1uF" V 2550 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2600 1100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/yageodocoutput-1313910.pdf" H 2600 1100 50  0001 C CNN
+F 4 "AS0805KKX7R9BB104" H 700 50  50  0001 C CNN "MPN"
+F 5 "Yageo" H 700 50  50  0001 C CNN "Manufacturer"
+	1    2600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1000 2750 750 
+Wire Wire Line
+	2750 750  2600 750 
+Wire Wire Line
+	2750 1200 2750 1300
+Wire Wire Line
+	2750 1300 2600 1300
+$Comp
+L Device:C_Small C10
+U 1 1 5CB04A47
+P 2750 1100
+F 0 "C10" V 2700 900 50  0000 L CNN
+F 1 "10uF" V 2700 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2750 1100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1078_X7R_FT-CAP_AUTO_SMD-1103315.pdf" H 2750 1100 50  0001 C CNN
+F 4 "C0805X106K8RACAUTO" H 850 50  50  0001 C CNN "MPN"
+F 5 "KEMET" H 850 50  50  0001 C CNN "Manufacturer"
+	1    2750 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L electrospinner-rescue:C_Small-Device-electrospinner-rescue C12
+U 1 1 5CB1BF3D
+P 3100 2550
+F 0 "C12" V 3050 2350 50  0000 L CNN
+F 1 "22uF" V 3050 2600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3100 2550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1006_X5R_SMD-1103249.pdf" H 3100 2550 50  0001 C CNN
+F 4 "C0805C226M8PACTU" H -500 50  50  0001 C CNN "MPN"
+F 5 "KEMET" H 3100 2550 50  0001 C CNN "Manufacturer"
+	1    3100 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2650 3100 2850
+Wire Wire Line
+	3100 2450 3100 2200
+$Comp
+L power:GNDD #PWR0122
+U 1 1 5CB1BF45
+P 3100 2850
+F 0 "#PWR0122" H 3100 2600 50  0001 C CNN
+F 1 "GNDD" H 3104 2695 50  0000 C CNN
+F 2 "" H 3100 2850 50  0001 C CNN
+F 3 "" H 3100 2850 50  0001 C CNN
+	1    3100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2200 3100 2200
+Connection ~ 2900 2200
+Connection ~ 3100 2200
+Wire Wire Line
+	3100 2200 3250 2200
 $EndSCHEMATC

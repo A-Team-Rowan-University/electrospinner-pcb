@@ -26,6 +26,26 @@ X MountPin MP 0 -300 120 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Conn_01x02_Female
+#
+DEF Connector_Conn_01x02_Female J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x02_Female" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+A 0 -100 20 901 -901 1 1 6 N 0 -80 0 -120
+A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
+P 2 1 1 6 -50 -100 -20 -100 N
+P 2 1 1 6 -50 0 -20 0 N
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_TestPoint
 #
 DEF Connector_TestPoint TP 0 30 N N 1 F N
@@ -163,11 +183,71 @@ X ~EN 9 -400 0 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_+12V-power
+# Sensor_Temperature_AD8495
 #
-DEF electrospinner-rescue_+12V-power #PWR 0 0 Y Y 1 F P
+DEF Sensor_Temperature_AD8495 U 0 20 Y Y 1 F N
+F0 "U" 200 150 50 H V C CNN
+F1 "Sensor_Temperature_AD8495" 350 -150 50 H V C CNN
+F2 "Package_SO:MSOP-8_3x3mm_P0.65mm" 900 -250 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS AD8495 AD8496 AD8497
+$FPLIST
+ MSOP*8*
+$ENDFPLIST
+DRAW
+P 4 0 1 10 -300 300 300 0 -300 -300 -300 300 f
+X -IN 1 -400 100 100 R 50 40 1 1 I
+X REF 2 100 -300 200 U 50 40 1 1 I
+X -Vs 3 -100 -300 100 U 50 50 1 1 W
+X NC 4 -200 0 100 L 50 50 1 1 N N
+X SENSE 5 0 -300 150 U 50 40 1 1 P
+X ~ 6 400 0 100 L 50 50 1 1 O
+X +Vs 7 -100 300 100 D 50 50 1 1 W
+X +IN 8 -400 -100 100 R 50 40 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Transistor_FET_2N7000
+#
+DEF Transistor_FET_2N7000 Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "Transistor_FET_2N7000" 200 0 50 H V L CNN
+F2 "Package_TO_SOT_THT:TO-92_Inline" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+ALIAS TP0610L VP0610L
+$FPLIST
+ TO?92*
+$ENDFPLIST
+DRAW
+C 65 0 111 0 1 10 N
+C 100 -70 11 0 1 0 F
+C 100 70 11 0 1 0 F
+P 2 0 1 0 -100 0 10 0 N
+P 2 0 1 0 30 -70 100 -70 N
+P 2 0 1 10 30 -50 30 -90 N
+P 2 0 1 0 30 0 100 0 N
+P 2 0 1 10 30 20 30 -20 N
+P 2 0 1 0 30 70 100 70 N
+P 2 0 1 10 30 90 30 50 N
+P 2 0 1 0 100 -70 100 -100 N
+P 2 0 1 0 100 -70 100 0 N
+P 2 0 1 0 100 100 100 70 N
+P 3 0 1 10 10 75 10 -75 10 -75 N
+P 4 0 1 0 40 0 80 15 80 -15 40 0 F
+P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
+P 4 0 1 0 110 20 115 15 145 15 150 10 N
+P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
+X S 1 100 -200 100 U 50 50 1 1 P
+X G 2 -200 0 100 R 50 50 1 1 I
+X D 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# electrospinner-rescue_+12V-power-electrospinner-rescue
+#
+DEF electrospinner-rescue_+12V-power-electrospinner-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "electrospinner-rescue_+12V-power" 0 140 50 H V C CNN
+F1 "electrospinner-rescue_+12V-power-electrospinner-rescue" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -178,11 +258,11 @@ X +12V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_+3V3-power
+# electrospinner-rescue_+3V3-power-electrospinner-rescue
 #
-DEF electrospinner-rescue_+3V3-power #PWR 0 0 Y Y 1 F P
+DEF electrospinner-rescue_+3V3-power-electrospinner-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "electrospinner-rescue_+3V3-power" 0 140 50 H V C CNN
+F1 "electrospinner-rescue_+3V3-power-electrospinner-rescue" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -193,11 +273,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_C_Small-Device
+# electrospinner-rescue_C_Small-Device-electrospinner-rescue-electrospinner-rescue
 #
-DEF electrospinner-rescue_C_Small-Device C 0 10 N N 1 F N
+DEF electrospinner-rescue_C_Small-Device-electrospinner-rescue-electrospinner-rescue C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "electrospinner-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F1 "electrospinner-rescue_C_Small-Device-electrospinner-rescue-electrospinner-rescue" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -211,29 +291,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_C_Small-Device-electrospinner-rescue
+# electrospinner-rescue_Conn_01x02_Female-Connector-electrospinner-rescue
 #
-DEF electrospinner-rescue_C_Small-Device-electrospinner-rescue C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "electrospinner-rescue_C_Small-Device-electrospinner-rescue" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 13 -60 -20 60 -20 N
-P 2 0 1 12 -60 20 60 20 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# electrospinner-rescue_Conn_01x02_Female-Connector
-#
-DEF electrospinner-rescue_Conn_01x02_Female-Connector J 0 40 Y N 1 F N
+DEF electrospinner-rescue_Conn_01x02_Female-Connector-electrospinner-rescue J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "electrospinner-rescue_Conn_01x02_Female-Connector" 0 -200 50 H V C CNN
+F1 "electrospinner-rescue_Conn_01x02_Female-Connector-electrospinner-rescue" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -249,11 +311,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_Conn_01x06_Female-Connector
+# electrospinner-rescue_Conn_01x06_Female-Connector-electrospinner-rescue
 #
-DEF electrospinner-rescue_Conn_01x06_Female-Connector J 0 40 Y N 1 F N
+DEF electrospinner-rescue_Conn_01x06_Female-Connector-electrospinner-rescue J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "electrospinner-rescue_Conn_01x06_Female-Connector" 0 -400 50 H V C CNN
+F1 "electrospinner-rescue_Conn_01x06_Female-Connector-electrospinner-rescue" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -281,11 +343,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_Conn_02x02_Counter_Clockwise-Connector_Generic
+# electrospinner-rescue_Conn_02x02_Counter_Clockwise-Connector_Generic-electrospinner-rescue
 #
-DEF electrospinner-rescue_Conn_02x02_Counter_Clockwise-Connector_Generic J 0 40 Y N 1 F N
+DEF electrospinner-rescue_Conn_02x02_Counter_Clockwise-Connector_Generic-electrospinner-rescue J 0 40 Y N 1 F N
 F0 "J" 50 100 50 H V C CNN
-F1 "electrospinner-rescue_Conn_02x02_Counter_Clockwise-Connector_Generic" 50 -200 50 H V C CNN
+F1 "electrospinner-rescue_Conn_02x02_Counter_Clockwise-Connector_Generic-electrospinner-rescue" 50 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -304,11 +366,11 @@ X Pin_4 4 300 0 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_FT230XS-Interface_USB
+# electrospinner-rescue_FT230XS-Interface_USB-electrospinner-rescue
 #
-DEF electrospinner-rescue_FT230XS-Interface_USB U 0 40 Y Y 1 F N
+DEF electrospinner-rescue_FT230XS-Interface_USB-electrospinner-rescue U 0 40 Y Y 1 F N
 F0 "U" -550 600 50 H V L CNN
-F1 "electrospinner-rescue_FT230XS-Interface_USB" 300 600 50 H V L CNN
+F1 "electrospinner-rescue_FT230XS-Interface_USB-electrospinner-rescue" 300 600 50 H V L CNN
 F2 "Package_SO:SSOP-16_3.9x4.9mm_P0.635mm" 450 -650 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -335,25 +397,11 @@ X USBDM 9 -700 100 150 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_GNDD-power
+# electrospinner-rescue_LED_Small-Device-electrospinner-rescue
 #
-DEF electrospinner-rescue_GNDD-power #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "electrospinner-rescue_GNDD-power" 0 -125 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -50 -60 50 -80 0 1 10 F
-P 2 0 1 0 0 0 0 -60 N
-X GNDD 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# electrospinner-rescue_LED_Small-Device
-#
-DEF electrospinner-rescue_LED_Small-Device D 0 10 N N 1 F N
+DEF electrospinner-rescue_LED_Small-Device-electrospinner-rescue D 0 10 N N 1 F N
 F0 "D" -50 125 50 H V L CNN
-F1 "electrospinner-rescue_LED_Small-Device" -175 -100 50 H V L CNN
+F1 "electrospinner-rescue_LED_Small-Device-electrospinner-rescue" -175 -100 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -372,11 +420,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_L_Small-Device-electrospinner-rescue
+# electrospinner-rescue_L_Small-Device-electrospinner-rescue-electrospinner-rescue
 #
-DEF electrospinner-rescue_L_Small-Device-electrospinner-rescue L 0 10 N N 1 F N
+DEF electrospinner-rescue_L_Small-Device-electrospinner-rescue-electrospinner-rescue L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
-F1 "electrospinner-rescue_L_Small-Device-electrospinner-rescue" 30 -40 50 H V L CNN
+F1 "electrospinner-rescue_L_Small-Device-electrospinner-rescue-electrospinner-rescue" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -395,11 +443,11 @@ X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue
+# electrospinner-rescue_MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue-electrospinner-rescue
 #
-DEF electrospinner-rescue_MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue U 0 20 Y Y 1 F N
+DEF electrospinner-rescue_MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue-electrospinner-rescue U 0 20 Y Y 1 F N
 F0 "U" -1500 700 50 H V C CNN
-F1 "electrospinner-rescue_MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue" 1250 -650 50 H V C CNN
+F1 "electrospinner-rescue_MSP430G2553IPW20-MCU_Texas_MSP430-electrospinner-rescue-electrospinner-rescue" 1250 -650 50 H V C CNN
 F2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" -1450 -550 50 H I C CIN
 F3 "" -50 0 50 H I C CNN
 $FPLIST
@@ -430,11 +478,11 @@ X P2.1/TA1.1 9 -1700 200 150 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_R_Small_US-Device
+# electrospinner-rescue_R_Small_US-Device-electrospinner-rescue-electrospinner-rescue
 #
-DEF electrospinner-rescue_R_Small_US-Device R 0 10 N N 1 F N
+DEF electrospinner-rescue_R_Small_US-Device-electrospinner-rescue-electrospinner-rescue R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "electrospinner-rescue_R_Small_US-Device" 30 -40 50 H V L CNN
+F1 "electrospinner-rescue_R_Small_US-Device-electrospinner-rescue-electrospinner-rescue" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -448,29 +496,11 @@ X ~ 2 0 -100 40 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_R_Small_US-Device-electrospinner-rescue
+# electrospinner-rescue_SW_Push-Switch-electrospinner-rescue
 #
-DEF electrospinner-rescue_R_Small_US-Device-electrospinner-rescue R 0 10 N N 1 F N
-F0 "R" 30 20 50 H V L CNN
-F1 "electrospinner-rescue_R_Small_US-Device-electrospinner-rescue" 30 -40 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- R_*
-$ENDFPLIST
-DRAW
-P 5 1 1 0 0 0 40 -15 0 -30 -40 -45 0 -60 N
-P 5 1 1 0 0 60 40 45 0 30 -40 15 0 0 N
-X ~ 1 0 100 40 D 50 50 1 1 P
-X ~ 2 0 -100 40 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# electrospinner-rescue_SW_Push-Switch
-#
-DEF electrospinner-rescue_SW_Push-Switch SW 0 40 N N 1 F N
+DEF electrospinner-rescue_SW_Push-Switch-electrospinner-rescue SW 0 40 N N 1 F N
 F0 "SW" 50 100 50 H V L CNN
-F1 "electrospinner-rescue_SW_Push-Switch" 0 -60 50 H V C CNN
+F1 "electrospinner-rescue_SW_Push-Switch-electrospinner-rescue" 0 -60 50 H V C CNN
 F2 "" 0 200 50 H I C CNN
 F3 "" 0 200 50 H I C CNN
 DRAW
@@ -483,11 +513,11 @@ X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
-# electrospinner-rescue_TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue
+# electrospinner-rescue_TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue-electrospinner-rescue
 #
-DEF electrospinner-rescue_TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue U 0 40 Y Y 1 F N
+DEF electrospinner-rescue_TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue-electrospinner-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 0 50 H V C CNN
-F1 "electrospinner-rescue_TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue" 0 -100 50 H V C CNN
+F1 "electrospinner-rescue_TPS62147-Regulator_Switching-electrospinner-rescue-electrospinner-rescue-electrospinner-rescue" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -537,17 +567,16 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power_GNDD
+# power_GND
 #
-DEF power_GNDD #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GNDD" 0 -125 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
-S -50 -60 50 -80 0 1 10 F
-P 2 0 1 0 0 0 0 -60 N
-X GNDD 1 0 0 0 D 50 50 1 1 W N
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #

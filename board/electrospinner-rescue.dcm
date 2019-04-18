@@ -1,8 +1,3 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP TPS62147
-D  High Accuracy 3-V to 17-V 2-A Step-Down Converter
-F /home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/datasheets/buck_converter.pdf
-$ENDCMP
-#
 #End Doc Library

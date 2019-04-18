@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name electrospinner)(type KiCad)(uri /home/john/Downloads/2019-03-16_14-52-53/footprints.pretty)(options "")(descr ""))
+  (lib (name libs)(type KiCad)(uri /home/john/Documents/School_Docs/jecii/projects/electrospinner-pcb/board/libs/footprints.pretty)(options "")(descr ""))
 )
